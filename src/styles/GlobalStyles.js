@@ -15,26 +15,7 @@ html {
 }
 
 body {
-    background: linear-gradient(90deg,
-      ${(props) => props.theme.color.Black},
-      ${(props) => props.theme.color.LightBlack}
-    );
-    background-size: 200% 200%;
-    animation: gradientAnimation 20s ease-in-out infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+    background: ${(props) => props.theme.color.Black}
 }
 
 // Custom scroll bar
@@ -50,6 +31,6 @@ body {
     background-color: ${(props) => props.theme.color.Slate};
     border-radius: 4px;
 } 
-`
+`;
 
 export default GlobalStyle;

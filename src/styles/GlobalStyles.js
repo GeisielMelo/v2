@@ -15,7 +15,20 @@ html {
 }
 
 body {
-    background: ${(props) => props.theme.color.Black}
+  background: ${(props) => props.theme.color.Black};
+}
+
+section {
+  padding: 100px 0px;
+  max-width: 1080px;
+  width: 100%;
+  border-left: 1px solid ${(props) => props.theme.color.transparent.Slate};
+  border-right: 1px solid ${(props) => props.theme.color.transparent.Slate};
+  border-bottom: 1px solid ${(props) => props.theme.color.transparent.Slate};
+  &:first-of-type { 
+    margin-top: 132px;
+    border-top: 1px solid ${(props) => props.theme.color.transparent.Slate};
+  }
 }
 
 // Custom scroll bar

@@ -12,10 +12,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: padding 0.3s ease;
   padding: 18px 30px;
+
+  @media (max-width: 1080px) {
+    padding: 18px 20px;
+  }
 
   border-bottom: 1px solid;
   border-color: ${(props) => (props["data-border-bottom"] ? props.theme.color.transparent.Slate : "transparent")};
+  background: ${(props) => props.theme.color.Black};
   transition: border-color 0.2s ease-in-out;
   button {
     display: flex;

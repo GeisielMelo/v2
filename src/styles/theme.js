@@ -4,7 +4,11 @@ export const theme = {
     LightBlack: "#18181b",
     White: "#ededed",
     Slate: "#686868",
+    LightSlate: "#a0a0a0",
     HeavySlate: "#424242",
+    transparent: {
+      Slate: "rgba(104, 104, 104, 0.4)",
+    },
   },
   font: {
     family: {

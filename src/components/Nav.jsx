@@ -20,26 +20,33 @@ const Container = styled.div`
   }
 
   border-bottom: 1px solid;
-  border-color: ${(props) => (props["data-border-bottom"] ? props.theme.color.transparent.Slate : "transparent")};
-  background: ${(props) => props.theme.color.Black};
+  border-color: ${(props) => (props["data-border-bottom"] ? props.theme.color.grey.transparent : "transparent")};
+  background: ${(props) => props.theme.color.black.default};
   transition: border-color 0.2s ease-in-out;
   button {
     display: flex;
     align-items: center;
     height: 30px;
-    padding: 10px;
     margin: 0 5px;
-    transition: color 0.2s ease-in-out;
+    font-family: ${(props) => props.theme.font.family.two};
+    font-size: ${(props) => props.theme.font.size.sm};
+    border-radius: 9999px;
+    background: transparent;
+    padding: 8px 12px;
+    line-height: 1;
+    transition-property: background, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
     cursor: pointer;
     &:hover {
-      color: ${(props) => props.theme.color.White};
+      color: ${(props) => props.theme.color.white.default};
     }
   }
   .hamburger-menu {
     width: 30px;
     height: 30px;
     background: none;
-    color: ${(props) => props.theme.color.Slate};
+    color: ${(props) => props.theme.color.grey.default};
   }
 `;
 
@@ -48,7 +55,7 @@ const Left = styled.div`
   align-items: center;
   button {
     background: none;
-    color: ${(props) => props.theme.color.LightSlate};
+    color: ${(props) => props.theme.color.grey.light};
   }
 `;
 
@@ -57,26 +64,28 @@ const Right = styled.div`
   align-items: center;
   .contact-btn {
     background: none;
-    color: ${(props) => props.theme.color.LightSlate};
+    color: ${(props) => props.theme.color.grey.default};
   }
   .resume-btn {
     background: none;
-    color: ${(props) => props.theme.color.White};
+    color: ${(props) => props.theme.color.white.default};
     border-radius: 6px;
-    border: 1px solid ${(props) => props.theme.color.transparent.Slate};
+    border: 1px solid ${(props) => props.theme.color.grey.transparent};
+    font-weight: ${(props) => props.theme.font.weight.bold};
     transition: background 0.2s ease-in-out;
     &:hover {
-      background: ${(props) => props.theme.color.Slate};
+      background: ${(props) => props.theme.color.grey.default};
     }
   }
   .linkedIn-btn {
-    background: ${(props) => props.theme.color.White};
-    color: ${(props) => props.theme.color.Black};
+    background: ${(props) => props.theme.color.white.default};
+    color: ${(props) => props.theme.color.black.default};
+    font-weight: ${(props) => props.theme.font.weight.bold};
     transition: background 0.2s ease-in-out;
     border-radius: 6px;
     &:hover {
-      color: ${(props) => props.theme.color.Black};
-      background: ${(props) => props.theme.color.LightSlate};
+      color: ${(props) => props.theme.color.black.default};
+      background: ${(props) => props.theme.color.grey.default};
     }
   }
 `;
@@ -93,44 +102,49 @@ const Logo = styled.div`
 const MobileMenu = styled.div`
   position: fixed;
   top: 68px;
-  width: calc(100% - 60px);
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  margin: 0 30px;
+  padding: 0 30px;
+  background: ${(props) => props.theme.color.black.default};
+  height: calc(100vh - 68px);
   button {
-    background: ${(props) => props.theme.color.Black};
-    color: ${(props) => props.theme.color.LightSlate};
-    border-bottom: 1px solid ${(props) => props.theme.color.transparent.Slate};
+    background: ${(props) => props.theme.color.black.default};
+    color: ${(props) => props.theme.color.grey.default};
+    border-bottom: 1px solid ${(props) => props.theme.color.grey.transparent};
+    font-family: ${(props) => props.theme.font.family.two};
     height: 48px;
     transition: border-color 0.1s ease-in-out;
     cursor: pointer;
     &:hover {
-      color: ${(props) => props.theme.color.White};
-      border-color: ${(props) => props.theme.color.White};
+      color: ${(props) => props.theme.color.white.default};
+      border-color: ${(props) => props.theme.color.white.default};
     }
   }
   .m-resume-btn {
     height: 40px;
     margin: 8px 0;
     border-radius: 6px;
-    color: ${(props) => props.theme.color.White};
-    border: 1px solid ${(props) => props.theme.color.transparent.Slate};
+    color: ${(props) => props.theme.color.white};
+    border: 1px solid ${(props) => props.theme.color.grey.transparent};
     transition: background 0.2s ease-in-out;
     &:hover {
-      background: ${(props) => props.theme.color.Slate};
+      border: ${(props) => props.theme.color.white};
     }
   }
   .m-linkedIn-btn {
     height: 40px;
     margin: 8px 0;
-    background: ${(props) => props.theme.color.White};
-    color: ${(props) => props.theme.color.Black};
+    background: ${(props) => props.theme.color.white.default};
+    color: ${(props) => props.theme.color.black.default};
     transition: background 0.2s ease-in-out;
     border-radius: 6px;
+    border: 1px solid ${(props) => props.theme.color.grey.transparent};
     &:hover {
-      color: ${(props) => props.theme.color.Black};
-      background: ${(props) => props.theme.color.LightSlate};
+      border: transparent;
+      color: ${(props) => props.theme.color.black.default};
+      background: ${(props) => props.theme.color.grey.default};
     }
   }
 `;
@@ -166,9 +180,11 @@ const Nav = ({ isMobile }) => {
   return (
     <>
       {!isMobile ? (
-        <Container data-border-bottom={prevScrollPos >= 65}>
+        <Container data-border-bottom={prevScrollPos >= 10}>
           <Left>
-            <Logo onClick={() => handleInternalLinkClick("/#")}><img src={logo} alt="Geisiel Melo Logo" /></Logo>
+            <Logo onClick={() => handleInternalLinkClick("/#")}>
+              <img src={logo} alt="Geisiel Melo Logo" />
+            </Logo>
             <button onClick={() => handleInternalLinkClick("/#about")}>About</button>
             <button onClick={() => handleInternalLinkClick("/#featured")}>Featured</button>
             <button onClick={() => handleInternalLinkClick("/#projects")}>Projects</button>
@@ -176,15 +192,23 @@ const Nav = ({ isMobile }) => {
           </Left>
 
           <Right>
-            <button className="contact-btn" onClick={() => handleInternalLinkClick("/#contact")}>Contact</button>
-            <button className="resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>Resume</button>
-            <button className="linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>LinkedIn</button>
+            <button className="contact-btn" onClick={() => handleInternalLinkClick("/#contact")}>
+              Contact
+            </button>
+            <button className="resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
+              Resume
+            </button>
+            <button className="linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
+              LinkedIn
+            </button>
           </Right>
         </Container>
       ) : (
         <>
           <Container data-border-bottom={prevScrollPos >= 65}>
-            <Logo onClick={() => handleInternalLinkClick("/#")}><img src={logo} alt="Geisiel Melo Logo" /></Logo>
+            <Logo onClick={() => handleInternalLinkClick("/#")}>
+              <img src={logo} alt="Geisiel Melo Logo" />
+            </Logo>
             <button className="hamburger-menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
             </button>
@@ -196,8 +220,12 @@ const Nav = ({ isMobile }) => {
               <button onClick={() => handleInternalLinkClick("/#projects")}>Projects</button>
               <button onClick={() => handleInternalLinkClick("/#archive")}>Archive</button>
               <button onClick={() => handleInternalLinkClick("/#contact")}>Contact</button>
-              <button className="m-resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>Resume</button>
-              <button className="m-linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>LinkedIn</button>
+              <button className="m-resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
+                Resume
+              </button>
+              <button className="m-linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
+                LinkedIn
+              </button>
             </MobileMenu>
           )}
         </>

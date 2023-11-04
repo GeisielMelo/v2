@@ -35,12 +35,15 @@ const Button = styled.button`
   margin: 2px;
   cursor: pointer;
   background: none;
-  color: ${(props) => props.theme.color.White};
-  transition: background 0.2s ease-in-out;
+  
+  color: ${(props) => props.theme.color.white.default};
+  transition-property: background, color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
   &:hover {
-    color: #00ADB5;
-    border: 1px solid #00ADB5;
-    background-color: #393E46;
+    color: ${(props) => props.theme.color.cyan.default};
+    border: 1px solid ${(props) => props.theme.color.cyan.default};
+    background-color: ${(props) => props.theme.color.grey.heavy};
   }
 `;
 
@@ -50,7 +53,7 @@ const Line = styled.div`
   width: 2px;
   max-height: 170px;
   height: 100%;
-  background-color: ${(props) => props.theme.color.Slate};
+  background-color: ${(props) => props.theme.color.grey.default};
   margin-top: 20px;
 `;
 
@@ -109,4 +112,4 @@ const VerticalBox = ({ translate, isMobile }) => {
   );
 };
 
-export default VerticalBox
+export default VerticalBox;

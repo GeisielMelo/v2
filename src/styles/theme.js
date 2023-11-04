@@ -2,7 +2,7 @@ export const theme = {
   color: {
     black: {
       default: "#000000",
-      light: "#18181b", 
+      light: "#18181b",
     },
     white: {
       default: "#ededed",
@@ -22,7 +22,7 @@ export const theme = {
   },
   font: {
     family: {
-      one: "'Inter var', sans-serif",
+      one: "'Inter', sans-serif",
       two: "'Noto Sans', sans-serif",
     },
     size: {

@@ -1,19 +1,29 @@
 export const theme = {
   color: {
-    Black: "#000000",
-    LightBlack: "#18181b",
-    White: "#ededed",
-    Slate: "#686868",
-    LightSlate: "#a0a0a0",
-    HeavySlate: "#424242",
-    transparent: {
-      Slate: "rgba(104, 104, 104, 0.4)",
+    black: {
+      default: "#000000",
+      light: "#18181b", 
+    },
+    white: {
+      default: "#ededed",
+      light: "#EEEEEE",
+    },
+    grey: {
+      default: "#686868",
+      light: "#a0a0a0",
+      heavy: "#424242",
+      transparent: "rgba(104, 104, 104, 0.4)",
+    },
+    cyan: {
+      default: "#00ADB5",
+      light: "#02c9d2",
+      transparent: "rgba(0, 173, 181, 0.4)",
     },
   },
   font: {
     family: {
-      one: "'Fira Code', monospace",
-      two: "'Inter var', sans-serif",
+      one: "'Inter var', sans-serif",
+      two: "'Noto Sans', sans-serif",
     },
     size: {
       bg: "32px",
@@ -23,7 +33,7 @@ export const theme = {
     },
     weight: {
       light: 300,
-      regular: 400,
+      regular: 500,
       bold: 700,
       black: 900,
     },

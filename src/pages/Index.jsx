@@ -43,8 +43,6 @@ const Index = () => {
           <Nav isMobile={isMobile} />
           <Hero />
           <About />
-          <About />
-          <About />
           <VerticalBox translate={handleLanguage} isMobile={isMobile} />
           <Footer />
         </Wrapper>

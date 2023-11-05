@@ -1,5 +1,29 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+
+export const HideMotion = ({ children, isVisible, delay = 0 }) => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({
+        opacity: 1,
+        transition: { duration: 0.5, delay: delay },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        transition: { duration: 0.5, delay: delay },
+      });
+    }
+  }, [isVisible, controls, delay]);
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={controls} exit={{ opacity: 0 }}>
+      {children}
+    </motion.div>
+  );
+};
 
 export const OpacityMotion = ({ children, delay = 0 }) => {
   return (

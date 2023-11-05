@@ -37,7 +37,7 @@ const Container = styled.div`
     margin-top: 20px;
     background-color: transparent;
     border: 1px solid transparent;
-    transition: border-color  0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
     color: ${(props) => props.theme.color.grey.default};
     cursor: pointer;
     &:hover {
@@ -57,10 +57,9 @@ const Hero = () => {
         {show ? (
           <OpacityMotion delay={0.3}>
             <p>
-              Software engineer with experience in web application development. I'm currently seeking new
-              opportunities to apply my skills and knowledge. With a special focus on creating accessible and
-              user-centric solutions, I am committed to building products that stand out and provide amazing experiences
-              for users.
+              Software engineer with experience in web application development. I'm currently seeking new opportunities
+              to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions,
+              I am committed to building products that stand out and provide amazing experiences for users.
             </p>
           </OpacityMotion>
         ) : null}

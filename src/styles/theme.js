@@ -3,6 +3,7 @@ export const theme = {
     black: {
       default: "#000000",
       light: "#0a0a0a",
+      transparent: "rgba(0, 0, 0, 0.5)",
     },
     white: {
       default: "#ededed",

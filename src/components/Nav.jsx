@@ -15,6 +15,8 @@ const Container = styled.div`
   transition: padding 0.3s ease;
   padding: 18px 30px;
 
+  z-index: 1;
+
   @media (max-width: 1080px) {
     padding: 18px 20px;
   }

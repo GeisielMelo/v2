@@ -53,19 +53,35 @@ const Code = styled.pre`
 `;
 
 export const CodeBox = () => {
-  const [code] = useState(`// Seu código JavaScript aqui
-  export default async function Page() { 
+  const [code] = useState(`// Learn more about Geisiel Melo
+  export const About = () => { 
     return (
-      <>
-        <h1>Users</h1>
-        <ul>
-          {data.map(user => (
-            <li key={user.id}>
-              {user.name}
-            </li>
-          )}
-        </ul>
-      </>
+      <div>
+        <h1>About Me!</h1>
+        <p>
+          Hello, I'm Geisiel Melo, and I love coding and 
+          problem-solving. My programming journey began with
+          configuring custom mods and servers for online games,
+          bringing enjoyment to my friends and me.Over time,
+          I ventured into creating scripts to automate tasks and 
+          eventually developed full-fledged applications 
+          for complex challenges.
+        </p>
+        <p>
+          As I delved into app development, I discovered my 
+          passion for creating solutions that benefit others.
+          This led me to focus on web application development,
+          aiming to provide accessible and user-friendly 
+          experiences to a broader audience.
+        </p>
+        <p>
+          Sharing my applications and witnessing how they simplify
+          people's lives motivates me greatly. I firmly believe in
+          the positive impact of technology on society, and I'm 
+          dedicated to crafting intuitive, efficient, and enjoyable 
+          web applications.
+        </p>
+      </div>
     );
   }`);
 

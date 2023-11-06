@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Wrapper from "../components/Wrapper";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
+import Featured from "../components/sections/Featured";
 import VerticalBox from "../components/VerticalBox";
 import Footer from "../components/Footer";
 
@@ -43,6 +44,7 @@ const Index = () => {
           <Nav isMobile={isMobile} />
           <Hero />
           <About />
+          <Featured />
           <VerticalBox translate={handleLanguage} isMobile={isMobile} />
           <Footer />
         </Wrapper>

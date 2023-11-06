@@ -9,7 +9,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  height: calc(100vh - 350px);
+  
   text-align: center;
   font-family: ${(props) => props.theme.font.family.one};
   color: ${(props) => props.theme.color.white.default};

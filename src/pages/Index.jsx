@@ -9,29 +9,16 @@ import Featured from "../components/sections/Featured";
 import Projects from "../components/sections/Projects";
 import VerticalBox from "../components/VerticalBox";
 import Footer from "../components/Footer";
+import { useScreenPosition } from "../hooks/useScreenPosition";
+import { useScreenWidth } from "../hooks/useScreenWidth";
 
 const Index = () => {
+  const ScreenPosition = useScreenPosition();
+  const ScreenWidth = useScreenWidth();
+
   const [data, setData] = useState(enUS);
   const [language, setLanguage] = useState("enUS");
   const [loading, setLoading] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1150);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    if (loading) {
-      setLoading(false);
-    }
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const handleLanguage = () => {
     const newLanguage = language === "enUS" ? "ptBR" : "enUS";
@@ -46,12 +33,12 @@ const Index = () => {
         <p>Loading</p>
       ) : (
         <Wrapper>
-          <Nav isMobile={isMobile} />
-          <Hero />
-          <About data={data.Technologies} />
-          <Featured />
-          <Projects data={data.Archive} />
-          <VerticalBox translate={handleLanguage} isMobile={isMobile} />
+          <Nav isMobile={ScreenWidth < 1150} />
+          <Hero isVisible={ScreenPosition >= 0} />
+          <About isVisible={ScreenPosition >= 200} data={data.Technologies} />
+          <Featured isVisible={ScreenPosition >= 800} />
+          <Projects isVisible={ScreenPosition >= 3100} data={data.Archive} />
+          <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />
           <Footer />
         </Wrapper>
       )}

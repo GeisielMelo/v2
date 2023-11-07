@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ProjectCard } from "../Cards";
-import { UpMotion } from "../Motion";
+import { UpMotion, HideMotion } from "../Motion";
 
 const Title = styled.div`
   text-align: center;
@@ -43,36 +43,37 @@ const Button = styled.div`
   }
 `;
 
-const Projects = ({ data }) => {
+const Projects = ({ data, isVisible }) => {
   const [maxCards, setMaxCards] = useState(6);
 
   return (
     <section id="projects">
-      <Title>
-        <h1>Other Noteworthy Projects</h1>
-        <p>Take a look!</p>
-      </Title>
-      <Cards>
-        {data?.slice(0, maxCards).map((item, index) => (
-          <UpMotion>
-            <ProjectCard
-              key={index}
-              title={item.Title}
-              description={item.Description}
-              tech={item.Technologies}
-              gitUrl={item.GitLink}
-              LiveUrl={item.LiveLink}
-            />
-          </UpMotion>
-        ))}
-      </Cards>
-      <Button>
-        {maxCards < data.length ? (
-          <button onClick={() => setMaxCards(maxCards + 3)}>Show More</button>
-        ) : (
-          <button onClick={() => setMaxCards(6)}>Show Less</button>
-        )}
-      </Button>
+      <HideMotion isVisible={isVisible}>
+        <Title>
+          <h1>Other Noteworthy Projects</h1>
+          <p>Take a look!</p>
+        </Title>
+        <Cards>
+          {data?.slice(0, maxCards).map((item, index) => (
+            <UpMotion key={index}>
+              <ProjectCard
+                title={item.Title}
+                description={item.Description}
+                tech={item.Technologies}
+                gitUrl={item.GitLink}
+                LiveUrl={item.LiveLink}
+              />
+            </UpMotion>
+          ))}
+        </Cards>
+        <Button>
+          {maxCards < data.length ? (
+            <button onClick={() => setMaxCards(maxCards + 3)}>Show More</button>
+          ) : (
+            <button onClick={() => setMaxCards(6)}>Show Less</button>
+          )}
+        </Button>
+      </HideMotion>
     </section>
   );
 };

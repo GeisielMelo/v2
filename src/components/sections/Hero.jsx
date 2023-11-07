@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { OpacityMotion } from "../Motion";
+import { HideMotion } from "../Motion";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
 import KeyboardDoubleArrowUpRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowUpRounded";
 
@@ -24,7 +24,6 @@ const Container = styled.div`
     width: 100%;
     height: ${(props) => (props["data-height"] ? "0px" : "100px")};
     transition: height 0.2s ease;
-    
 
     @media (max-width: 768px) {
       margin: 20px 0;
@@ -65,7 +64,7 @@ const Container = styled.div`
   }
 `;
 
-const Hero = () => {
+const Hero = ({ isVisible }) => {
   const [show, setShow] = useState(false);
   const [displayText, setDisplayText] = useState(false);
 
@@ -80,23 +79,25 @@ const Hero = () => {
   };
 
   return (
-    <section>
-      <Container data-height={!show} data-display={displayText}>
-        <h1>Geisiel Melo</h1>
-        <h2>I'm a Full Stack Developer</h2>
+    <section isVisible={isVisible} id="#">
+      <HideMotion isVisible={isVisible}>
+        <Container data-height={!show} data-display={displayText}>
+          <h1>Geisiel Melo</h1>
+          <h2>I'm a Full Stack Developer</h2>
 
-        <div>
-          <p>
-            Software engineer with experience in web application development. I'm currently seeking new opportunities to
-            apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions, I am
-            committed to building products that stand out and provide amazing experiences for users.
-          </p>
-        </div>
+          <div>
+            <p>
+              Software engineer with experience in web application development. I'm currently seeking new opportunities
+              to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions,
+              I am committed to building products that stand out and provide amazing experiences for users.
+            </p>
+          </div>
 
-        <button onClick={() => (show ? handleShowLess() : handleShowMore())}>
-          {!show ? <KeyboardDoubleArrowDownRoundedIcon /> : <KeyboardDoubleArrowUpRoundedIcon />}
-        </button>
-      </Container>
+          <button onClick={() => (show ? handleShowLess() : handleShowMore())}>
+            {!show ? <KeyboardDoubleArrowDownRoundedIcon /> : <KeyboardDoubleArrowUpRoundedIcon />}
+          </button>
+        </Container>
+      </HideMotion>
     </section>
   );
 };

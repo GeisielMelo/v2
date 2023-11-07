@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { OpacityMotion } from "../Motion";
+import { OpacityMotion, HideMotion } from "../Motion";
 
 const Container = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ const Logo = styled.div`
   }
 `;
 
-const About = ({ data }) => {
+const About = ({ data, isVisible }) => {
   const [logo, setLogo] = useState();
   const [logoAlt, setLogoAlt] = useState();
   const [visibleLogo, setVisibleLogo] = useState(false);
@@ -109,41 +109,43 @@ const About = ({ data }) => {
 
   return (
     <section id="about">
-      <Container>
-        <h1>About me</h1>
-        <p>
-          A self taught Full Stack Software Engineer. Since I was a kid, I have been fascinated by computers and enjoyed
-          the process of creating things. As a result, I pursued a career in Software Engineering, which combines my
-          interests in technology and creation.
-        </p>
-      </Container>
+      <HideMotion isVisible={isVisible}>
+        <Container>
+          <h1>About me</h1>
+          <p>
+            A self taught Full Stack Software Engineer. Since I was a kid, I have been fascinated by computers and
+            enjoyed the process of creating things. As a result, I pursued a career in Software Engineering, which
+            combines my interests in technology and creation.
+          </p>
+        </Container>
 
-      <Technologies>
-        <Frame>
-          <span />
-          <Logo>
-            {visibleLogo ? (
-              <OpacityMotion delay={0.1}>
-                <img src={logo} alt={logoAlt} />
-              </OpacityMotion>
-            ) : null}
-          </Logo>
-          <span />
-        </Frame>
-        <p>Here are some of the technologies I've worked with:</p>
-        <ul>
-          {data.map((item, index) => (
-            <li
-              title={item.name}
-              key={index}
-              onMouseEnter={() => handleShowLogo(item)}
-              onMouseLeave={() => handleHideLogo()}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      </Technologies>
+        <Technologies>
+          <Frame>
+            <span />
+            <Logo>
+              {visibleLogo ? (
+                <OpacityMotion delay={0.1}>
+                  <img src={logo} alt={logoAlt} />
+                </OpacityMotion>
+              ) : null}
+            </Logo>
+            <span />
+          </Frame>
+          <p>Here are some of the technologies I've worked with:</p>
+          <ul>
+            {data.map((item, index) => (
+              <li
+                title={item.name}
+                key={index}
+                onMouseEnter={() => handleShowLogo(item)}
+                onMouseLeave={() => handleHideLogo()}
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
+        </Technologies>
+      </HideMotion>
     </section>
   );
 };

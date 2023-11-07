@@ -60,12 +60,12 @@ const Frame = styled.div`
   justify-content: center;
   max-width: 600px;
   width: 100%;
-  margin: 10px 10px;
+  height: 100px;
   span {
     height: 1px;
     border-bottom: 1px solid;
     border-color: ${(props) => props.theme.color.grey.transparent};
-    width: calc(100% - 80px);
+    width: 100%;
     margin: 0 10px;
   }
 `;
@@ -75,8 +75,11 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 180px;
-  height: 80px;
+  max-width: 60px;
+  max-height: 60px;
+  width: 100%;
+  height: 100%;
+
   border-radius: 50%;
   border: 1px solid ${(props) => props.theme.color.grey.transparent};
   margin: 0 10px;
@@ -84,8 +87,8 @@ const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 40px;
+    max-height: 40px;
   }
 `;
 

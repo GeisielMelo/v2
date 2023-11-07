@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FeaturedProject } from "../FeaturedProject";
+import { FeaturedCard } from "../Cards";
 
 const Container = styled.div`
 text-align: center;
@@ -23,10 +23,10 @@ const Featured = () => {
         <p>A catalog of significant personal projects I've undertaken in my spare time.</p>
       </Container>
 
-      <FeaturedProject float={"left"} />
-      <FeaturedProject float={"right"} />
-      <FeaturedProject float={"left"} />
-      <FeaturedProject float={"right"} />
+      <FeaturedCard float={"left"} />
+      <FeaturedCard float={"right"} />
+      <FeaturedCard float={"left"} />
+      <FeaturedCard float={"right"} />
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-export const HideMotion = ({ children, isVisible, delay = 0 }) => {
+export const HideMotion = ({ children, isVisible, delay = 0.2 }) => {
   const controls = useAnimation();
 
   useEffect(() => {

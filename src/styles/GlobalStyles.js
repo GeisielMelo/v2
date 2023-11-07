@@ -31,6 +31,12 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   // Custom scroll bar
   ::-webkit-scrollbar {
     width: 5px;

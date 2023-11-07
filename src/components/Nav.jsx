@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import logo from "../assets/img/logo.png";
 
 const Container = styled.div`
   position: fixed;
@@ -185,7 +184,7 @@ const Nav = ({ isMobile }) => {
         <Container data-border-bottom={prevScrollPos >= 10}>
           <Left>
             <Logo onClick={() => handleInternalLinkClick("/#")}>
-              <img src={logo} alt="Geisiel Melo Logo" />
+              <img src="./img/logo.png" alt="Geisiel Melo Logo" />
             </Logo>
             <button onClick={() => handleInternalLinkClick("/#about")}>About</button>
             <button onClick={() => handleInternalLinkClick("/#featured")}>Featured</button>
@@ -209,7 +208,7 @@ const Nav = ({ isMobile }) => {
         <>
           <Container data-border-bottom={prevScrollPos >= 65}>
             <Logo onClick={() => handleInternalLinkClick("/#")}>
-              <img src={logo} alt="Geisiel Melo Logo" />
+              <img src="./img/logo.png" alt="Geisiel Melo Logo" />
             </Logo>
             <button className="hamburger-menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}

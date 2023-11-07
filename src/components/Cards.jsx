@@ -3,7 +3,6 @@ import styled from "styled-components";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FolderIcon from "@mui/icons-material/Folder";
-import example from "../assets/img/example.png";
 
 const FeaturedContent = styled.div`
   position: relative;
@@ -160,7 +159,7 @@ const ProjectsContent = styled.div`
 export const FeaturedCard = ({ float, title, subTitle, description, techList }) => {
   return (
     <>
-      <FeaturedContent float={float} imageUrl={example}>
+      <FeaturedContent float={float} imageUrl='./img/example.png'>
         <FeaturedDescription float={float} style={float === "left" ? { left: 0 } : { right: 0 }}>
           <div>
             <h1>Featured Project</h1>

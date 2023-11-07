@@ -1,8 +1,0 @@
-
-export { default as Figma } from "./figma.svg";
-export { default as Git} from "./git.svg";
-export { default as MongoDB} from "./mongo.svg";
-export { default as MySql} from "./mysql.svg";
-export { default as Python} from "./python.svg";
-
-

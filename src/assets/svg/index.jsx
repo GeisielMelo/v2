@@ -1,0 +1,13 @@
+export { default as CSS3 } from "./css.svg";
+export { default as Express } from "./express.svg";
+export { default as Figma } from "./figma.svg";
+export { default as Git} from "./git.svg";
+export { default as HTML5} from "./html.svg";
+export { default as JavaScript} from "./js.svg";
+export { default as MongoDB} from "./mongo.svg";
+export { default as MySql} from "./mysql.svg";
+export { default as Node} from "./node.svg";
+export { default as Python} from "./python.svg";
+export { default as React} from "./react.svg";
+export { default as Redis} from "./redis.svg";
+export { default as Vite } from "./vite.svg";

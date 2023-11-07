@@ -7,7 +7,6 @@ import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Featured from "../components/sections/Featured";
 import Projects from "../components/sections/Projects";
-import Tech from "../components/sections/Tech";
 import VerticalBox from "../components/VerticalBox";
 import Footer from "../components/Footer";
 
@@ -49,8 +48,7 @@ const Index = () => {
         <Wrapper>
           <Nav isMobile={isMobile} />
           <Hero />
-          <About />
-          <Tech data={data.Technologies} />
+          <About data={data.Technologies} />
           <Featured />
           <Projects data={data.Archive} />
           <VerticalBox translate={handleLanguage} isMobile={isMobile} />

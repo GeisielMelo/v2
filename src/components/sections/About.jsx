@@ -1,33 +1,143 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { CodeBox } from "../CodeBox";
+import { OpacityMotion } from "../Motion";
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  flex-direction: column;
+  text-align: center;
+  color: ${(props) => props.theme.color.white.default};
+  margin: 0px 30px 10px 30px;
   h1 {
-    font-size: clamp(9px, 5vw, 24px);
     font-family: ${(props) => props.theme.font.family.one};
-    color: ${(props) => props.theme.color.white.default};
-    border: 1px solid ${(props) => props.theme.color.grey.transparent};
-    background-color: transparent;
-    font-weight: 500;
-    margin-bottom: 30px;
-    padding: 5px 10px;
-    text-align: center;
+  }
+  p {
+    margin-top: 5px;
+    font-family: ${(props) => props.theme.font.family.two};
+    max-width: 600px;
   }
 `;
 
-const About = () => {
+const Technologies = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    width: 100%;
+    color: ${(props) => props.theme.color.white.default};
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  li {
+    padding: 10px 20px;
+    border: 1px solid ${(props) => props.theme.color.grey.transparent};
+    font-family: ${(props) => props.theme.font.family.two};
+    font-size: ${(props) => props.theme.font.size.sm};
+    margin: 5px;
+    border-radius: 9999px;
+  }
+  p {
+    margin-top: 5px;
+    font-family: ${(props) => props.theme.font.family.two};
+    color: ${(props) => props.theme.color.white.default};
+  }
+`;
+
+const Frame = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 10px 10px;
+  span {
+    height: 1px;
+    border-bottom: 1px solid;
+    border-color: ${(props) => props.theme.color.grey.transparent};
+    width: 100%;
+  }
+`;
+
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid ${(props) => props.theme.color.grey.transparent};
+  margin: 0 10px;
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50px;
+    max-height: 50px;
+  }
+`;
+
+const About = ({ data }) => {
+  const [logo, setLogo] = useState();
+  const [logoAlt, setLogoAlt] = useState();
+  const [visibleLogo, setVisibleLogo] = useState(false);
+
+  const handleShowLogo = (item) => {
+    setLogo(item.svg);
+    setLogoAlt(item.name);
+    setVisibleLogo(true);
+  };
+
+  const handleHideLogo = () => {
+    setVisibleLogo(false);
+  };
+
   return (
     <section>
       <Container>
-        <h1>{"Learn more <About> Me!"}</h1>
-        <CodeBox />
+        <h1>About me</h1>
+        <p>
+          A self taught Full Stack Software Engineer. Since I was a kid, I have been fascinated by computers and enjoyed
+          the process of creating things. As a result, I pursued a career in Software Engineering, which combines my
+          interests in technology and creation.
+        </p>
       </Container>
+
+      <Technologies>
+        <Frame>
+          <span />
+          <Logo>
+            {visibleLogo ? (
+              <OpacityMotion delay={0.1}>
+                <img src={logo} alt={logoAlt} />
+              </OpacityMotion>
+            ) : null}
+          </Logo>
+          <span />
+        </Frame>
+        <p>Here are some of the technologies I've worked with:</p>
+        <ul>
+          {data.map((item, index) => (
+            <li
+              title={item.name}
+              key={index}
+              onMouseEnter={() => handleShowLogo(item)}
+              onMouseLeave={() => handleHideLogo()}
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </Technologies>
     </section>
   );
 };

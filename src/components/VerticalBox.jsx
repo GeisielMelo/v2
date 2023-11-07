@@ -39,7 +39,7 @@ const Button = styled.button`
   color: ${(props) => props.theme.color.white.default};
   transition-property: background, color, border;
   transition-duration: 0.2s;
-  transition-timing-function: ease;
+  transition-timing-function: ease-in-out;
   &:hover {
     color: ${(props) => props.theme.color.cyan.default};
     border: 1px solid ${(props) => props.theme.color.cyan.default};

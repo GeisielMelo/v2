@@ -16,8 +16,7 @@ const FeaturedContent = styled.div`
   outline: 1px solid ${(props) => props.theme.color.grey.transparent};
   border-radius: 12px;
   margin: 0px 10px 100px 10px;
-
-  background-image: url(${(props) => props.imageUrl});
+  background-image: url(${(props) => props["data-image"]});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,6 +71,12 @@ const FeaturedDescription = styled.div`
     gap: 10px;
     margin: 10px 0;
     flex-wrap: wrap;
+    li {
+      &:hover {
+        transition: color 0.2s ease-in-out;
+        color: ${(props) => props.theme.color.grey.light};
+      }
+    }
   }
   .buttons {
     display: flex;
@@ -83,6 +88,9 @@ const FeaturedDescription = styled.div`
       justify-content: center;
       background: none;
       color: ${(props) => props.theme.color.white.default};
+      &:hover {
+        color: ${(props) => props.theme.color.cyan.default};
+      }
     }
   }
 `;
@@ -90,9 +98,8 @@ const FeaturedDescription = styled.div`
 const ProjectsContent = styled.div`
   position: relative;
   max-width: 325px;
-  width: 100%;
+  height: 100%;
   padding: 20px;
-  margin: 5px;
   background: ${(props) => props.theme.color.cyan.transparent};
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(176, 179, 184, 0.7);
@@ -159,7 +166,7 @@ const ProjectsContent = styled.div`
 export const FeaturedCard = ({ float, title, subTitle, description, techList }) => {
   return (
     <>
-      <FeaturedContent float={float} imageUrl='./img/example.png'>
+      <FeaturedContent float={float} data-image="./img/example.png">
         <FeaturedDescription float={float} style={float === "left" ? { left: 0 } : { right: 0 }}>
           <div>
             <h1>Featured Project</h1>

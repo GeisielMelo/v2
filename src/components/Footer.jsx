@@ -15,7 +15,6 @@ const Container = styled.footer`
   transition-property: background, color;
   transition-duration: 0.2s;
   transition-timing-function: ease;
-  cursor: pointer;
   span {
     cursor: pointer;
     &:hover {

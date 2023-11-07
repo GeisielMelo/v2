@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ProjectCard } from "../Cards";
+import { UpMotion } from "../Motion";
 
 const Title = styled.div`
   text-align: center;
@@ -19,6 +20,7 @@ const Cards = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 `;
 
 const Button = styled.div`
@@ -45,21 +47,23 @@ const Projects = ({ data }) => {
   const [maxCards, setMaxCards] = useState(6);
 
   return (
-    <section>
+    <section id="projects">
       <Title>
         <h1>Other Noteworthy Projects</h1>
         <p>Take a look!</p>
       </Title>
       <Cards>
         {data?.slice(0, maxCards).map((item, index) => (
-          <ProjectCard
-            key={index}
-            title={item.Title}
-            description={item.Description}
-            tech={item.Technologies}
-            gitUrl={item.GitLink}
-            LiveUrl={item.LiveLink}
-          />
+          <UpMotion>
+            <ProjectCard
+              key={index}
+              title={item.Title}
+              description={item.Description}
+              tech={item.Technologies}
+              gitUrl={item.GitLink}
+              LiveUrl={item.LiveLink}
+            />
+          </UpMotion>
         ))}
       </Cards>
       <Button>

@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
   button {
     &:hover {
       cursor: pointer;
+      transition: color 0.2s ease-in-out;
     }
   }
 

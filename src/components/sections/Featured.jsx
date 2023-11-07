@@ -17,7 +17,7 @@ margin: 0px 30px 95px 30px;
 
 const Featured = () => {
   return (
-    <section>
+    <section id="featured">
       <Container>
         <h1>Some Things I’ve Built</h1>
         <p>A catalog of significant personal projects I've undertaken in my spare time.</p>

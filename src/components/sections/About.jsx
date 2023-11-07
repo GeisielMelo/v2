@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   text-align: center;
   color: ${(props) => props.theme.color.white.default};
-  margin: 0px 30px 10px 30px;
+  margin: 10px 10px;
   h1 {
     font-family: ${(props) => props.theme.font.family.one};
   }
@@ -25,7 +25,8 @@ const Technologies = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
- ul {
+  margin: 10px 10px;
+  ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +47,8 @@ const Technologies = styled.div`
     border-radius: 9999px;
   }
   p {
-    margin-top: 5px;
+    text-align: center;
+    margin: 5px 10px;
     font-family: ${(props) => props.theme.font.family.two};
     color: ${(props) => props.theme.color.white.default};
   }
@@ -63,7 +65,8 @@ const Frame = styled.div`
     height: 1px;
     border-bottom: 1px solid;
     border-color: ${(props) => props.theme.color.grey.transparent};
-    width: 100%;
+    width: calc(100% - 80px);
+    margin: 0 10px;
   }
 `;
 
@@ -72,7 +75,7 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 80px;
+  width: 180px;
   height: 80px;
   border-radius: 50%;
   border: 1px solid ${(props) => props.theme.color.grey.transparent};

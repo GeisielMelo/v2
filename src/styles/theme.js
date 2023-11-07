@@ -25,6 +25,7 @@ export const theme = {
     family: {
       one: "'Inter', sans-serif",
       two: "'Noto Sans', sans-serif",
+      three: "'Anonymous Pro', monospace",
     },
     size: {
       bg: "32px",

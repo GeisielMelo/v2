@@ -1,4 +1,41 @@
 {
+  "sections": {
+    "Nav": {
+      "buttons": {
+        "about": "About",
+        "featured": "Featured",
+        "projects": "Projects",
+        "archive": "Archive",
+        "contact": "Contact",
+        "resume": "Resume",
+        "linkedin": "LinkedIn"
+      }
+    },
+
+    "Hero": {
+      "title": "Geisiel Melo",
+      "subtitle": "I'm a Full Stack Developer",
+      "description": "Software engineer with experience in web application development. I'm currently seeking new opportunities to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions, I am committed to building products that stand out and provide amazing experiences for users."
+    },
+    "About": {
+      "title": "About me",
+      "subtitle": "Here are some of the technologies I've worked with:",
+      "description": "A self taught Full Stack Software Engineer. Since I was a kid, I have been fascinated by computers and enjoyed the process of creating things. As a result, I pursued a career in Software Engineering, which combines my interests in technology and creation."
+    },
+    "Featured": {
+      "title": "Some Things I’ve Built",
+      "subtitle": "A catalog of significant personal projects I've undertaken in my spare time.",
+      "description": ""
+    },
+    "Projects": {
+      "title": "Other Noteworthy Projects",
+      "subtitle": "Take a look!",
+      "description": "",
+      "buttons": { "more": "Show More!", "less": "Show Less!" }
+    },
+    "Contact": { "title": "", "subtitle": "", "description": "" },
+    "Footer": { "title": "© Designed & Built by", "subtitle": "Geisiel Melo", "description": "" }
+  },
   "Technologies": [
     { "name": "React", "svg": "./svg/react.svg" },
     { "name": "Redis", "svg": "./svg/redis.svg" },

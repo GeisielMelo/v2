@@ -1,4 +1,41 @@
 {
+  "sections": {
+    "Nav": {
+      "buttons": {
+        "about": "Sobre",
+        "featured": "Destaque",
+        "projects": "Projetos",
+        "archive": "Arquivo",
+        "contact": "Contato",
+        "resume": "Resumo",
+        "linkedin": "LinkedIn"
+      }
+    },
+
+    "Hero": {
+      "title": "Geisiel Melo",
+      "subtitle": "Sou um Desenvolvedor Full Stack",
+      "description": "Engenheiro de software com experiência no desenvolvimento de aplicações web. Atualmente estou em busca de novas oportunidades para aplicar minhas habilidades e conhecimentos. Com um foco especial na criação de soluções acessíveis e centradas no usuário, estou comprometido em construir produtos que se destaquem e proporcionem experiências incríveis para os usuários."
+    },
+    "About": {
+      "title": "Sobre mim",
+      "subtitle": "Aqui estão algumas tecnologias que eu ja utilizei:",
+      "description": "Um Engenheiro de Software Full Stack autodidata. Desde criança, fui fascinado por computadores e sempre gostei do processo de criar coisas. Como resultado, busquei uma carreira em Engenharia de Software, que une meus interesses em tecnologia e criação."
+    },
+    "Featured": {
+      "title": "Projetos Notáveis",
+      "subtitle": "Um catálogo de projetos pessoais significativos que realizei no meu tempo livre.",
+      "description": ""
+    },
+    "Projects": {
+      "title": "Algumas coisas que desenvolvi",
+      "subtitle": "Dê uma olhada!",
+      "description": "",
+      "buttons": { "more": "Ver Mais!", "less": "Ver Menos!" }
+    },
+    "Contact": { "title": "", "subtitle": "", "description": "" },
+    "Footer": { "title": "© Desenvolvido e construído por", "subtitle": "Geisiel Melo", "description": "" }
+  },
   "Technologies": [
     { "name": "React", "svg": "./svg/react.svg" },
     { "name": "Redis", "svg": "./svg/redis.svg" },

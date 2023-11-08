@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import enUS from "../locales/en-US.json";
 import ptBR from "../locales/pt-BR.json";
 import Nav from "../components/Nav";
@@ -16,15 +16,11 @@ const Index = () => {
   const ScreenPosition = useScreenPosition();
   const ScreenWidth = useScreenWidth();
 
-  const [data, setData] = useState(enUS);
-  const [language, setLanguage] = useState("enUS");
   const [loading, setLoading] = useState(false);
+  const [locale, setLocale] = useState(enUS);
 
   const handleLanguage = () => {
-    const newLanguage = language === "enUS" ? "ptBR" : "enUS";
-    localStorage.setItem("language", JSON.stringify(newLanguage));
-    setLanguage(newLanguage);
-    language === "enUS" ? setData(enUS) : setData(ptBR);
+    locale === enUS ? setLocale(ptBR) : setLocale(enUS);
   };
 
   return (
@@ -33,13 +29,13 @@ const Index = () => {
         <p>Loading</p>
       ) : (
         <Wrapper>
-          <Nav isMobile={ScreenWidth < 1150} />
-          <Hero isVisible={ScreenPosition >= 0} />
-          <About isVisible={ScreenPosition >= 200} data={data.Technologies} />
-          <Featured isVisible={ScreenPosition >= 800} />
-          <Projects isVisible={ScreenPosition >= 3100} data={data.Archive} />
+          <Nav isMobile={ScreenWidth < 1150} locale={locale.sections.Nav.buttons} />
+          <Hero isVisible={ScreenPosition >= 0} locale={locale.sections.Hero} />
+          <About isVisible={ScreenPosition >= 200} data={locale.Technologies} locale={locale.sections.About} />
+          <Featured isVisible={ScreenPosition >= 800} locale={locale.sections.Featured} />
+          <Projects isVisible={ScreenPosition >= 3100} data={locale.Archive} locale={locale.sections.Projects} />
           <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />
-          <Footer />
+          <Footer locale={locale.sections.Footer} />
         </Wrapper>
       )}
     </>

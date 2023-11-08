@@ -7,6 +7,7 @@ import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Featured from "../components/sections/Featured";
 import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 import VerticalBox from "../components/VerticalBox";
 import Footer from "../components/Footer";
 import { useScreenPosition } from "../hooks/useScreenPosition";
@@ -34,6 +35,7 @@ const Index = () => {
           <About isVisible={ScreenPosition >= 200} data={locale.Technologies} locale={locale.sections.About} />
           <Featured isVisible={ScreenPosition >= 800} locale={locale.sections.Featured} />
           <Projects isVisible={ScreenPosition >= 3100} data={locale.Archive} locale={locale.sections.Projects} />
+          <Contact locale={locale.sections.Contact}/>
           <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />
           <Footer locale={locale.sections.Footer} />
         </Wrapper>

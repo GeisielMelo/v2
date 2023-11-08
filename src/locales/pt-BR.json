@@ -33,7 +33,12 @@
       "description": "",
       "buttons": { "more": "Ver Mais!", "less": "Ver Menos!" }
     },
-    "Contact": { "title": "", "subtitle": "", "description": "" },
+    "Contact": {
+      "title": "Entre em contato",
+      "subtitle": "Vamos trabalhar juntos!",
+      "description": "Se você tiver alguma pergunta, consulta ou se estiver interessado em colaborar em um projeto, não hesite em entrar em contato. Minha caixa de entrada está sempre aberta e adoraria conversar e explorar como podemos trabalhar juntos!",
+      "buttons": { "contact": "Diga Olá!" }
+    },
     "Footer": { "title": "© Desenvolvido e construído por", "subtitle": "Geisiel Melo", "description": "" }
   },
   "Technologies": [

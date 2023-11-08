@@ -33,7 +33,12 @@
       "description": "",
       "buttons": { "more": "Show More!", "less": "Show Less!" }
     },
-    "Contact": { "title": "", "subtitle": "", "description": "" },
+    "Contact": {
+      "title": "Contact Me",
+      "subtitle": "Let's work together!",
+      "description": "If you have any questions, inquiries, or if you're interested in collaborating on a project, don't hesitate to reach out. My inbox is always open, and I'd love to chat and explore how we can work together!",
+      "buttons": { "contact": "Say Hello!" }
+    },
     "Footer": { "title": "© Designed & Built by", "subtitle": "Geisiel Melo", "description": "" }
   },
   "Technologies": [

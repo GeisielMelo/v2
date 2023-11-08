@@ -43,15 +43,15 @@ const Button = styled.div`
   }
 `;
 
-const Projects = ({ data, isVisible }) => {
+const Projects = ({ locale, data, isVisible }) => {
   const [maxCards, setMaxCards] = useState(6);
 
   return (
     <section id="projects">
       <HideMotion isVisible={isVisible}>
         <Title>
-          <h1>Other Noteworthy Projects</h1>
-          <p>Take a look!</p>
+          <h1>{locale.title}</h1>
+          <p>{locale.subtitle}</p>
         </Title>
         <Cards>
           {data?.slice(0, maxCards).map((item, index) => (

@@ -92,7 +92,7 @@ const Logo = styled.div`
   }
 `;
 
-const About = ({ data, isVisible }) => {
+const About = ({ locale, data, isVisible }) => {
   const [logo, setLogo] = useState();
   const [logoAlt, setLogoAlt] = useState();
   const [visibleLogo, setVisibleLogo] = useState(false);
@@ -111,12 +111,8 @@ const About = ({ data, isVisible }) => {
     <section id="about">
       <HideMotion isVisible={isVisible}>
         <Container>
-          <h1>About me</h1>
-          <p>
-            A self taught Full Stack Software Engineer. Since I was a kid, I have been fascinated by computers and
-            enjoyed the process of creating things. As a result, I pursued a career in Software Engineering, which
-            combines my interests in technology and creation.
-          </p>
+          <h1>{locale.title}</h1>
+          <p>{locale.description}</p>
         </Container>
 
         <Technologies>
@@ -131,7 +127,7 @@ const About = ({ data, isVisible }) => {
             </Logo>
             <span />
           </Frame>
-          <p>Here are some of the technologies I've worked with:</p>
+          <p>{locale.subtitle}</p>
           <ul>
             {data.map((item, index) => (
               <li

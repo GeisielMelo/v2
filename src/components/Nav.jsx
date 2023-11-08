@@ -150,7 +150,7 @@ const MobileMenu = styled.div`
   }
 `;
 
-const Nav = ({ isMobile }) => {
+const Nav = ({ locale, isMobile }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const linkedInUrl = "https://www.linkedin.com/in/geisiel-nascimento-858346265";
@@ -186,21 +186,21 @@ const Nav = ({ isMobile }) => {
             <Logo onClick={() => handleInternalLinkClick("/#")}>
               <img src="./img/logo.png" alt="Geisiel Melo Logo" />
             </Logo>
-            <button onClick={() => handleInternalLinkClick("/#about")}>About</button>
-            <button onClick={() => handleInternalLinkClick("/#featured")}>Featured</button>
-            <button onClick={() => handleInternalLinkClick("/#projects")}>Projects</button>
-            <button onClick={() => handleInternalLinkClick("/#archive")}>Archive</button>
+            <button onClick={() => handleInternalLinkClick("/#about")}>{locale.about}</button>
+            <button onClick={() => handleInternalLinkClick("/#featured")}>{locale.featured}</button>
+            <button onClick={() => handleInternalLinkClick("/#projects")}>{locale.projects}</button>
+            <button onClick={() => handleInternalLinkClick("/#archive")}>{locale.archive}</button>
           </Left>
 
           <Right>
             <button className="contact-btn" onClick={() => handleInternalLinkClick("/#contact")}>
-              Contact
+              {locale.contact}
             </button>
             <button className="resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
-              Resume
+              {locale.resume}
             </button>
             <button className="linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
-              LinkedIn
+              {locale.linkedin}
             </button>
           </Right>
         </Container>
@@ -216,16 +216,16 @@ const Nav = ({ isMobile }) => {
           </Container>
           {isMobileMenuOpen && (
             <MobileMenu>
-              <button onClick={() => handleInternalLinkClick("/#about")}>About</button>
-              <button onClick={() => handleInternalLinkClick("/#featured")}>Featured</button>
-              <button onClick={() => handleInternalLinkClick("/#projects")}>Projects</button>
-              <button onClick={() => handleInternalLinkClick("/#archive")}>Archive</button>
-              <button onClick={() => handleInternalLinkClick("/#contact")}>Contact</button>
+              <button onClick={() => handleInternalLinkClick("/#about")}>{locale.about}</button>
+              <button onClick={() => handleInternalLinkClick("/#featured")}>{locale.featured}</button>
+              <button onClick={() => handleInternalLinkClick("/#projects")}>{locale.projects}</button>
+              <button onClick={() => handleInternalLinkClick("/#archive")}>{locale.archive}</button>
+              <button onClick={() => handleInternalLinkClick("/#contact")}>{locale.contact}</button>
               <button className="m-resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
-                Resume
+                {locale.resume}
               </button>
               <button className="m-linkedIn-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
-                LinkedIn
+                {locale.linkedin}
               </button>
             </MobileMenu>
           )}

@@ -64,7 +64,7 @@ const Container = styled.div`
   }
 `;
 
-const Hero = ({ isVisible }) => {
+const Hero = ({ locale, isVisible }) => {
   const [show, setShow] = useState(false);
   const [displayText, setDisplayText] = useState(false);
 
@@ -82,15 +82,11 @@ const Hero = ({ isVisible }) => {
     <section isVisible={isVisible} id="#">
       <HideMotion isVisible={isVisible}>
         <Container data-height={!show} data-display={displayText}>
-          <h1>Geisiel Melo</h1>
-          <h2>I'm a Full Stack Developer</h2>
+          <h1>{locale.title}</h1>
+          <h2>{locale.subtitle}</h2>
 
           <div>
-            <p>
-              Software engineer with experience in web application development. I'm currently seeking new opportunities
-              to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions,
-              I am committed to building products that stand out and provide amazing experiences for users.
-            </p>
+            <p>{locale.description}</p>
           </div>
 
           <button onClick={() => (show ? handleShowLess() : handleShowMore())}>

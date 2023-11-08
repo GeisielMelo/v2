@@ -7,7 +7,7 @@ const Container = styled.footer`
   justify-content: center;
   height: 90px;
   width: 100%;
-  
+
   color: ${(props) => props.theme.color.white.default};
   font-family: ${(props) => props.theme.font.family.two};
   font-size: ${(props) => props.theme.font.size.sm};
@@ -24,13 +24,13 @@ const Container = styled.footer`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ locale }) => {
   return (
     <Container>
       <div>
         <p>
-          © Designed & Built by{" "}
-          <span onClick={() => window.open("https://github.com/GeisielMelo", "_blank")}>Geisiel Melo</span>
+          {locale.title}{" "}
+          <span onClick={() => window.open("https://github.com/GeisielMelo", "_blank")}>{locale.subtitle}</span>
         </p>
       </div>
     </Container>

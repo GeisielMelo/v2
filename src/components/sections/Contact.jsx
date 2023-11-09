@@ -52,18 +52,18 @@ const ContactContainer = styled.div`
   background: none;
   border-radius: 5px;
   width: 100%;
+  font-family: ${(props) => props.theme.font.family.one};
 
-  transition: max-width 0.2s ease-in-out, height 0.4s ease-in-out, border-color 0.6s ease;
+  transition: max-width 0.2s ease-in-out, height 0.4s ease-in-out, border-color 0.6s ease, background-color 0.2s ease;
   cursor: ${(props) => (props["data-expanded"] ? "default" : "pointer")};
-  max-width: ${(props) => (props["data-expanded"] ? "560px" : "200px")};
-  height: ${(props) => (props["data-expanded"] ? "320px" : "40px")};
+  max-width: ${(props) => (props["data-expanded"] ? "560px" : "160px")};
+  height: ${(props) => (props["data-expanded"] ? "320px" : "60px")};
 
   color: ${(props) => props.theme.color.cyan.default};
   border: 1px solid;
-  border-color: ${(props) =>
-    props["data-expanded"] ? props.theme.color.grey.default : props.theme.color.cyan.default};
+  border-color: ${(props) => (props["data-expanded"] ? "transparent" : props.theme.color.cyan.default)};
   &:hover {
-    background: ${(props) => (props["data-expanded"] ? "none" : props.theme.color.grey.default)};
+    background: ${(props) => (props["data-expanded"] ? "none" : props.theme.color.grey.transparent)};
   }
 `;
 
@@ -79,7 +79,7 @@ const Contact = ({ locale }) => {
           <p>{locale.description}</p>
         </Header>
         <ContactContainer data-expanded={formVisible} onClick={() => setFormVisible(true)}>
-          {formVisible ? <ContactForm /> : <h1>{locale.buttons.contact}</h1>}
+          {formVisible ? <ContactForm locale={locale.form} /> : <h1>{locale.buttons.contact}</h1>}
         </ContactContainer>
       </Container>
     </section>

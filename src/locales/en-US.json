@@ -37,7 +37,13 @@
       "title": "Contact Me",
       "subtitle": "Let's work together!",
       "description": "If you have any questions, inquiries, or if you're interested in collaborating on a project, don't hesitate to reach out. My inbox is always open, and I'd love to chat and explore how we can work together!",
-      "buttons": { "contact": "Say Hello!" }
+      "buttons": { "contact": "Say Hello!" },
+      "form": {
+        "placeholderName": "Name",
+        "placeholderEmail": "E-Mail",
+        "placeholderMessage": "Message",
+        "doneMessage": "Your email has been successfully sent. I will get back to you as soon as possible."
+      }
     },
     "Footer": { "title": "© Designed & Built by", "subtitle": "Geisiel Melo", "description": "" }
   },

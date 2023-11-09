@@ -37,7 +37,13 @@
       "title": "Entre em contato",
       "subtitle": "Vamos trabalhar juntos!",
       "description": "Se você tiver alguma pergunta, consulta ou se estiver interessado em colaborar em um projeto, não hesite em entrar em contato. Minha caixa de entrada está sempre aberta e adoraria conversar e explorar como podemos trabalhar juntos!",
-      "buttons": { "contact": "Diga Olá!" }
+      "buttons": { "contact": "Diga Olá!" },
+      "form": {
+        "placeholderName": "Nome",
+        "placeholderEmail": "E-mail",
+        "placeholderMessage": "Mensagem",
+        "doneMessage": "Seu e-mail foi enviado com sucesso. Retornarei o mais breve possível."
+      }
     },
     "Footer": { "title": "© Desenvolvido e construído por", "subtitle": "Geisiel Melo", "description": "" }
   },

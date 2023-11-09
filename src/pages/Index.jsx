@@ -33,7 +33,7 @@ const Index = () => {
           <Nav isMobile={ScreenWidth < 1150} locale={locale.sections.Nav.buttons} />
           <Hero visible={ScreenPosition >= 0} locale={locale.sections.Hero} />
           <About visible={ScreenPosition >= 200} data={locale.Technologies} locale={locale.sections.About} />
-          <Featured visible={ScreenPosition >= 800} locale={locale.sections.Featured} />
+          <Featured visible={ScreenPosition >= 800} data={locale.Archive} locale={locale.sections.Featured} />
           <Projects visible={ScreenPosition >= 3100} data={locale.Archive} locale={locale.sections.Projects} />
           <Contact locale={locale.sections.Contact}/>
           <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />

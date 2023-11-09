@@ -97,7 +97,7 @@
     {
       "Title": "Reminders API",
       "Description": "A Reminders API é um servidor backend projetado especificamente para o aplicativo Reminders. Ele lida com o armazenamento e a recuperação de dados, utilizando o banco de dados MongoDB hospedado no Atlas. Ele integra-se perfeitamente com o aplicativo frontend, permitindo que os usuários criem, atualizem e recuperem seus dados com facilidade.",
-      "Technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "Technologies": ["Node.js", "MongoDB", "Express"],
       "GitLink": "https://github.com/GeisielMelo/reminders-api",
       "ImageLink": "https://img001.prntscr.com/file/img001/QsJpQFvsRICcKfkGZ5r3RA.png",
       "LiveLink": null,
@@ -115,7 +115,7 @@
     {
       "Title": "Portfolio",
       "Description": "Meu portfólio é uma plataforma projetada para facilitar a comunicação e mostrar meus projetos. Inspirado no design de Brittany Chiang, ele foi completamente escrito e desenvolvido por mim. Tem como objetivo fornecer uma visão clara e envolvente do meu trabalho, habilidades e experiências.",
-      "Technologies": ["React", "Node.js", "CSS", "Express"],
+      "Technologies": ["React", "Node.js", "CSS", "HTML"],
       "GitLink": "https://github.com/GeisielMelo/Portfolio",
       "ImageLink": "https://img001.prntscr.com/file/img001/Te2QHnGOQKqGJKhLkMgNfg.png",
       "LiveLink": "https://geisielmelo.netlify.app/",

@@ -64,7 +64,7 @@ const Container = styled.div`
   }
 `;
 
-const Hero = ({ locale, isVisible }) => {
+const Hero = ({ locale, visible }) => {
   const [show, setShow] = useState(false);
   const [displayText, setDisplayText] = useState(false);
 
@@ -79,12 +79,11 @@ const Hero = ({ locale, isVisible }) => {
   };
 
   return (
-    <section isVisible={isVisible} id="#">
-      <HideMotion isVisible={isVisible}>
+    <section id="#">
+      <HideMotion visible={visible}>
         <Container data-height={!show} data-display={displayText}>
           <h1>{locale.title}</h1>
           <h2>{locale.subtitle}</h2>
-
           <div>
             <p>{locale.description}</p>
           </div>

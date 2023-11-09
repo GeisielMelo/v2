@@ -92,7 +92,7 @@ const Logo = styled.div`
   }
 `;
 
-const About = ({ locale, data, isVisible }) => {
+const About = ({ locale, data, visible }) => {
   const [logo, setLogo] = useState();
   const [logoAlt, setLogoAlt] = useState();
   const [visibleLogo, setVisibleLogo] = useState(false);
@@ -109,7 +109,7 @@ const About = ({ locale, data, isVisible }) => {
 
   return (
     <section id="about">
-      <HideMotion isVisible={isVisible}>
+      <HideMotion visible={visible}>
         <Container>
           <h1>{locale.title}</h1>
           <p>{locale.description}</p>

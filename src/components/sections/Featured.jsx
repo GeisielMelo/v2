@@ -16,10 +16,10 @@ const Container = styled.div`
   }
 `;
 
-const Featured = ({ locale, isVisible }) => {
+const Featured = ({ locale, visible }) => {
   return (
     <section id="featured">
-      <HideMotion isVisible={isVisible}>
+      <HideMotion visible={visible}>
         <Container>
           <h1>{locale.title}</h1>
           <p>{locale.subtitle}</p>

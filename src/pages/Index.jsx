@@ -31,10 +31,10 @@ const Index = () => {
       ) : (
         <Wrapper>
           <Nav isMobile={ScreenWidth < 1150} locale={locale.sections.Nav.buttons} />
-          <Hero isVisible={ScreenPosition >= 0} locale={locale.sections.Hero} />
-          <About isVisible={ScreenPosition >= 200} data={locale.Technologies} locale={locale.sections.About} />
-          <Featured isVisible={ScreenPosition >= 800} locale={locale.sections.Featured} />
-          <Projects isVisible={ScreenPosition >= 3100} data={locale.Archive} locale={locale.sections.Projects} />
+          <Hero visible={ScreenPosition >= 0} locale={locale.sections.Hero} />
+          <About visible={ScreenPosition >= 200} data={locale.Technologies} locale={locale.sections.About} />
+          <Featured visible={ScreenPosition >= 800} locale={locale.sections.Featured} />
+          <Projects visible={ScreenPosition >= 3100} data={locale.Archive} locale={locale.sections.Projects} />
           <Contact locale={locale.sections.Contact}/>
           <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />
           <Footer locale={locale.sections.Footer} />

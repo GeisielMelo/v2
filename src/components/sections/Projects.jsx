@@ -43,12 +43,12 @@ const Button = styled.div`
   }
 `;
 
-const Projects = ({ locale, data, isVisible }) => {
+const Projects = ({ locale, data, visible }) => {
   const [maxCards, setMaxCards] = useState(6);
 
   return (
     <section id="projects">
-      <HideMotion isVisible={isVisible}>
+      <HideMotion visible={visible}>
         <Title>
           <h1>{locale.title}</h1>
           <p>{locale.subtitle}</p>

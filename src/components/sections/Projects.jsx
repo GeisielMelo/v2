@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { ProjectCard } from "../Cards";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FolderIcon from "@mui/icons-material/Folder";
 import { UpMotion, HideMotion } from "../Motion";
 
 const Title = styled.div`
@@ -13,6 +15,7 @@ const Title = styled.div`
   p {
     margin-top: 5px;
     font-family: ${(props) => props.theme.font.family.two};
+    color: ${(props) => props.theme.color.cyan.default};
   }
 `;
 
@@ -43,8 +46,83 @@ const Button = styled.div`
   }
 `;
 
+const ProjectsContent = styled.div`
+  position: relative;
+  max-width: 325px;
+  height: 100%;
+  padding: 20px;
+  background: ${(props) => props.theme.color.black.light};
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(176, 179, 184, 0.7);
+  &:hover {
+    transition: box-shadow 0.4s ease;
+    box-shadow: 1px 1px 3px ${(props) => props.theme.color.cyan.default};
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: ${(props) => props.theme.font.family.one};
+    color: ${(props) => props.theme.color.white.default};
+  }
+  p {
+    margin-bottom: 50px;
+    font-family: ${(props) => props.theme.font.family.two};
+    color: ${(props) => props.theme.color.grey.light};
+  }
+  ul {
+    position: absolute;
+    bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: ${(props) => props.theme.font.family.one};
+    font-size: ${(props) => props.theme.font.size.es};
+    color: ${(props) => props.theme.color.white.default};
+    font-weight: 600;
+    cursor: default;
+    li {
+      &:hover {
+        color: ${(props) => props.theme.color.grey.light};
+      }
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: ${(props) => props.theme.color.white.default};
+    &:hover {
+      color: ${(props) => props.theme.color.cyan.default};
+    }
+  }
+
+  @media screen and (max-width: 860px) and (min-width: 611px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 610px) {
+    max-width: 760px;
+    margin: 10px 20px;
+  }
+`;
+
 const Projects = ({ locale, data, visible }) => {
   const [maxCards, setMaxCards] = useState(6);
+
+  const handleButtonClick = (link) => {
+    window.open(link, "_blank");
+  };
 
   return (
     <section id="projects">
@@ -56,21 +134,42 @@ const Projects = ({ locale, data, visible }) => {
         <Cards>
           {data?.slice(0, maxCards).map((item, index) => (
             <UpMotion key={index}>
-              <ProjectCard
-                title={item.Title}
-                description={item.Description}
-                tech={item.Technologies}
-                gitUrl={item.GitLink}
-                LiveUrl={item.LiveLink}
-              />
+              <ProjectsContent>
+                <div className="header">
+                  <button>
+                    <FolderIcon />
+                  </button>
+
+                  <div>
+                    {item.GitLink && (
+                      <button onClick={() => handleButtonClick(item.GitLink)}>
+                        <GitHubIcon />
+                      </button>
+                    )}
+
+                    {item.LiveLink && (
+                      <button onClick={() => handleButtonClick(item.LiveLink)}>
+                        <OpenInNewIcon />
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <h1>{item.Title}</h1>
+                <p>{item.Description}</p>
+                <ul>
+                  {item.Technologies.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </ProjectsContent>
             </UpMotion>
           ))}
         </Cards>
         <Button>
           {maxCards < data.length ? (
-            <button onClick={() => setMaxCards(maxCards + 3)}>Show More</button>
+            <button onClick={() => setMaxCards(maxCards + 3)}>{locale.buttons.more}</button>
           ) : (
-            <button onClick={() => setMaxCards(6)}>Show Less</button>
+            <button onClick={() => setMaxCards(6)}>{locale.buttons.less}</button>
           )}
         </Button>
       </HideMotion>

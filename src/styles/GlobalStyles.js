@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     border-right: 1px solid ${(props) => props.theme.color.grey.transparent}; 
     border-bottom: 1px solid ${(props) => props.theme.color.grey.transparent};
     &:first-of-type { 
-      margin-top: 132px;
+      margin-top: 90px;
       border-top: 1px solid ${(props) => props.theme.color.grey.transparent};
     }
   }

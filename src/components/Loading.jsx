@@ -7,8 +7,8 @@ const Container = styled.div`
 `;
 
 const Spinner = styled.div`
-  border: 4px solid #088395;
-  border-top: 4px solid #35a29f;
+  border: 4px solid ${(props) => props.theme.color.cyan.default};
+  border-top: 4px solid ${(props) => props.theme.color.cyan.light};
   border-radius: 50%;
   max-width: ${(props) => props.maxWidth || "25px"};
   max-height: ${(props) => props.maxHeight || "25px"};

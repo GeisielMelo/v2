@@ -19,12 +19,13 @@ const Container = styled.div`
     width: 100%;
     height: 40px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid ${(props) => props.theme.color.grey.transparent};
     transition: border-color 0.3s;
     margin-bottom: 10px;
     padding: 10px;
     &:focus {
-      border-color: #35a29f;
+      border-color: ${(props) => props.theme.color.cyan.default};
+      box-shadow: 1px 1px 2px ${(props) => props.theme.color.cyan.transparent};
     }
     &:disabled {
       cursor: not-allowed;
@@ -57,7 +58,7 @@ const Container = styled.div`
 `;
 
 const ContactForm = ({ locale }) => {
-  const reCaptchaKey = import.meta.env.VITE_RECAPTCHAV2_SITE_KEY;
+  const reCaptchaSiteKey = import.meta.env.VITE_RECAPTCHAV2_SITE_KEY;
   const service = import.meta.env.VITE_EMAILJS_SERVICE;
   const template = import.meta.env.VITE_EMAILJS_TEMPLATE;
   const emailJsKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -125,7 +126,7 @@ const ContactForm = ({ locale }) => {
         ></textarea>
 
         <div className="submit">
-          {!emailSended && <ReCAPTCHA sitekey={reCaptchaKey} onChange={() => handleCaptcha()} />}
+          {!emailSended && <ReCAPTCHA sitekey={reCaptchaSiteKey} onChange={handleCaptcha} />}
           <button onClick={() => handleSubmit()} disabled={handleBlockSubmit()}>
             {emailSended ? locale.doneMessage : loading ? <Loading /> : <SendIcon />}
           </button>

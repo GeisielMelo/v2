@@ -14,6 +14,7 @@ const Container = styled.div`
   p {
     margin-top: 5px;
     font-family: ${(props) => props.theme.font.family.two};
+    color: ${(props) => props.theme.color.cyan.default};
   }
 `;
 

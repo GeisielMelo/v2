@@ -25,19 +25,19 @@ const Header = styled.div`
 
     font-family: ${(props) => props.theme.font.family.two};
     font-weight: ${(props) => props.theme.font.weight.regular};
-    color: ${(props) => props.theme.color.white.default};
+    color: ${(props) => props.theme.color.cyan.default};
   }
   h1 {
     margin: 20px 0px 10px 0px;
     font-size: clamp(40px, 5vw, 60px);
     font-family: ${(props) => props.theme.font.family.one};
-    color: ${(props) => props.theme.color.grey.default};
+    color: ${(props) => props.theme.color.white.default};
   }
   p {
     padding: 0 10px;
     max-width: 600px;
     font-family: ${(props) => props.theme.font.family.two};
-    color: ${(props) => props.theme.color.grey.default};
+    color: ${(props) => props.theme.color.grey.light};
     font-weight: ${(props) => props.theme.font.weight.regular};
     text-align: center;
   }

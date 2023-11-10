@@ -2,7 +2,7 @@ export const theme = {
   color: {
     black: {
       default: "#000000",
-      light: "#0a0a0a",
+      light: "#393E46",
       transparent: "rgba(0, 0, 0, 0.5)",
     },
     white: {
@@ -16,7 +16,7 @@ export const theme = {
       transparent: "rgba(104, 104, 104, 0.4)",
     },
     cyan: {
-      default: "#00ADB5",
+      default: "#02bec7",
       light: "#02c9d2",
       transparent: "rgba(0, 173, 181, 0.4)",
     },

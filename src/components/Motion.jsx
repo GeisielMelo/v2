@@ -50,3 +50,16 @@ export const UpMotion = ({ children, delay = 0 }) => {
     </motion.div>
   );
 };
+
+export const TableTrUpMotion = ({ children, delay = 0 }) => {
+  return (
+    <motion.tr
+    initial={{ y: 50, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    exit={{ y: -50, opacity: 0 }}
+    transition={{ duration: 0.5, delay: delay }}
+    >
+      {children}
+    </motion.tr>
+  );
+};

@@ -15,7 +15,8 @@
     "Hero": {
       "title": "Geisiel Melo",
       "subtitle": "Sou um Desenvolvedor Full Stack",
-      "description": "Engenheiro de software com experiência no desenvolvimento de aplicações web. Atualmente estou em busca de novas oportunidades para aplicar minhas habilidades e conhecimentos. Com um foco especial na criação de soluções acessíveis e centradas no usuário, estou comprometido em construir produtos que se destaquem e proporcionem experiências incríveis para os usuários."
+      "description": "Engenheiro de software com experiência no desenvolvimento de aplicações web. Atualmente estou em busca de novas oportunidades para aplicar minhas habilidades e conhecimentos. Com um foco especial na criação de soluções acessíveis e centradas no usuário, estou comprometido em construir produtos que se destaquem e proporcionem experiências incríveis para os usuários.",
+      "greetings": "Olá, me chamo"
     },
     "About": {
       "title": "Sobre mim",

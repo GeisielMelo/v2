@@ -15,7 +15,8 @@
     "Hero": {
       "title": "Geisiel Melo",
       "subtitle": "I'm a Full Stack Developer",
-      "description": "Software engineer with experience in web application development. I'm currently seeking new opportunities to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions, I am committed to building products that stand out and provide amazing experiences for users."
+      "description": "Software engineer with experience in web application development. I'm currently seeking new opportunities to apply my skills and knowledge. With a special focus on creating accessible and user-centric solutions, I am committed to building products that stand out and provide amazing experiences for users.",
+      "greetings": "Hi, my name is"
     },
     "About": {
       "title": "About me",

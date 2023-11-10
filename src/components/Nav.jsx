@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
@@ -151,6 +152,7 @@ const MobileMenu = styled.div`
 `;
 
 const Nav = ({ locale, isMobile }) => {
+  const navigate = useNavigate();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const linkedInUrl = "https://www.linkedin.com/in/geisiel-nascimento-858346265";
@@ -189,7 +191,7 @@ const Nav = ({ locale, isMobile }) => {
             <button onClick={() => handleInternalLinkClick("/#about")}>{locale.about}</button>
             <button onClick={() => handleInternalLinkClick("/#featured")}>{locale.featured}</button>
             <button onClick={() => handleInternalLinkClick("/#projects")}>{locale.projects}</button>
-            <button onClick={() => handleInternalLinkClick("/#archive")}>{locale.archive}</button>
+            <button onClick={() => navigate("/archive")}>{locale.archive}</button>
           </Left>
 
           <Right>
@@ -219,7 +221,7 @@ const Nav = ({ locale, isMobile }) => {
               <button onClick={() => handleInternalLinkClick("/#about")}>{locale.about}</button>
               <button onClick={() => handleInternalLinkClick("/#featured")}>{locale.featured}</button>
               <button onClick={() => handleInternalLinkClick("/#projects")}>{locale.projects}</button>
-              <button onClick={() => handleInternalLinkClick("/#archive")}>{locale.archive}</button>
+              <button onClick={() => navigate("/archive")}>{locale.archive}</button>
               <button onClick={() => handleInternalLinkClick("/#contact")}>{locale.contact}</button>
               <button className="m-resume-btn" onClick={() => handleExternalLinkClick(linkedInUrl)}>
                 {locale.resume}

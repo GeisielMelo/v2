@@ -91,7 +91,7 @@
       "Description": "Um aplicativo prático de anotações inspirado no Google Keep que ajuda você a organizar suas tarefas e compromissos.",
       "Technologies": ["React", "Node.js", "MongoDB", "Axios"],
       "GitLink": "https://github.com/GeisielMelo/reminders",
-      "ImageLink": "https://img001.prntscr.com/file/img001/-vheMMlIQYmFefa_IeL9YA.png",
+      "ImageLink": "https://github.com/GeisielMelo/v2/blob/main/public/img/preview.png?raw=true",
       "LiveLink": null,
       "Featured": true
     },

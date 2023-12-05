@@ -92,7 +92,7 @@
       "Description": "A practical note-taking app inspired by Google Keep that helps you keep your tasks and appointments organized.",
       "Technologies": ["React", "Node.js", "MongoDB", "Axios"],
       "GitLink": "https://github.com/GeisielMelo/reminders",
-      "ImageLink": "https://img001.prntscr.com/file/img001/-vheMMlIQYmFefa_IeL9YA.png",
+      "ImageLink": "https://github.com/GeisielMelo/v2/blob/main/public/img/preview.png?raw=true",
       "LiveLink": null,
       "Featured": true
     },

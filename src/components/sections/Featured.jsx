@@ -32,7 +32,6 @@ const FeaturedContent = styled.div`
   margin: 0px 10px 100px 10px;
   background-image: url(${(props) => props["data-image"]});
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 
   &::before {
@@ -142,12 +141,12 @@ const Featured = ({ locale, visible, data }) => {
                 </ul>
                 <div className="buttons ">
                   {item.LiveLink && (
-                    <button onClick={() => handleButtonClick(item.LiveLink)} >
+                    <button onClick={() => handleButtonClick(item.LiveLink)}>
                       <GitHubIcon />
                     </button>
                   )}
                   {item.GitLink && (
-                    <button onClick={() => handleButtonClick(item.GitLink)} >
+                    <button onClick={() => handleButtonClick(item.GitLink)}>
                       <OpenInNewIcon />
                     </button>
                   )}

@@ -15,7 +15,7 @@ const Container = styled.div`
   transition: padding 0.3s ease;
   padding: 18px 30px;
 
-  z-index: 1;
+  z-index: 4;
 
   @media (max-width: 1080px) {
     padding: 18px 20px;
@@ -106,6 +106,8 @@ const MobileMenu = styled.div`
   top: 68px;
   width: 100%;
 
+  z-index: 4;
+
   display: flex;
   flex-direction: column;
   padding: 0 30px;
@@ -155,7 +157,7 @@ const Nav = ({ locale, isMobile }) => {
   const navigate = useNavigate();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const linkedInUrl = "https://www.linkedin.com/in/geisiel-nascimento-858346265";
+  const linkedInUrl = "https://www.linkedin.com/in/geisiel/";
 
   useEffect(() => {
     const handleScroll = () => {

@@ -60,7 +60,7 @@ const Line = styled.div`
 const VerticalBox = ({ translate, isMobile }) => {
   const urls = {
     Github: "https://github.com/GeisielMelo",
-    LinkedIn: "https://www.linkedin.com/in/geisiel-nascimento-858346265",
+    LinkedIn: "https://www.linkedin.com/in/geisiel/",
     Email: "geisiel.nascimento@gmail.com",
   };
 

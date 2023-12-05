@@ -115,6 +115,10 @@ const Featured = ({ locale, visible, data }) => {
     }
   };
 
+  const handleButtonClick = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <section id="featured">
       <HideMotion visible={visible}>
@@ -138,12 +142,12 @@ const Featured = ({ locale, visible, data }) => {
                 </ul>
                 <div className="buttons ">
                   {item.LiveLink && (
-                    <button>
+                    <button onClick={() => handleButtonClick(item.LiveLink)} >
                       <GitHubIcon />
                     </button>
                   )}
                   {item.GitLink && (
-                    <button>
+                    <button onClick={() => handleButtonClick(item.GitLink)} >
                       <OpenInNewIcon />
                     </button>
                   )}

@@ -142,12 +142,12 @@ const Featured = ({ locale, visible, data }) => {
                 <div className="buttons ">
                   {item.LiveLink && (
                     <button onClick={() => handleButtonClick(item.LiveLink)}>
-                      <GitHubIcon />
+                      <OpenInNewIcon />
                     </button>
                   )}
                   {item.GitLink && (
                     <button onClick={() => handleButtonClick(item.GitLink)}>
-                      <OpenInNewIcon />
+                      <GitHubIcon />
                     </button>
                   )}
                 </div>

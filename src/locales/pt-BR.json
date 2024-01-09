@@ -69,6 +69,33 @@
   ],
   "Archive": [
     {
+      "Title": "Profile Visualizer",
+      "Description": "Uma maneira mais eficaz de visualizar informações do usuário por meio de gráficos e estatísticas. Aqui, você pode acessar todos os detalhes relevantes sobre os usuários do GitHub com facilidade.",
+      "Technologies": ["React", "TypeScript", "Node.js", "Styled Components"],
+      "GitLink": "https://github.com/GeisielMelo/Profile-visualizer",
+      "ImageLink": "https://github.com/GeisielMelo/Profile-visualizer/blob/main/public/preview.png",
+      "LiveLink": "https://profile-visualizer.vercel.app",
+      "Featured": false
+    },
+    {
+      "Title": "IMDb",
+      "Description": "Um aplicativo criado no meu tempo livre com o objetivo de ser uma aplicação apenas de front-end alimentada por dados do TheMovieDB. Foi projetado para ser uma plataforma amigável onde você pode buscar informações sobre filmes e séries de forma fácil e intuitiva.",
+      "Technologies": ["React", "TypeScript", "Tailwind", "Firebase"],
+      "GitLink": "https://github.com/GeisielMelo/IMDb",
+      "ImageLink": "https://github.com/GeisielMelo/IMDb/blob/main/public/preview.png",
+      "LiveLink": "https://imdb-geisielmelo.vercel.app",
+      "Featured": true
+    },
+    {
+      "Title": "Accounting app",
+      "Description": "Interface de frontend para um aplicativo de contabilidade. O objetivo aqui era criar um design responsivo que exibe o conteúdo de cada seção na mesma página.",
+      "Technologies": ["React", "Node.js", "Styled Components", "React Table"],
+      "GitLink": "https://github.com/GeisielMelo/Accounting-app",
+      "ImageLink": "https://github.com/GeisielMelo/Accounting-app/blob/main/public/preview.png",
+      "LiveLink": "https://accounting-app-geisielmelo.vercel.app/",
+      "Featured": false
+    },
+    {
       "Title": "Maciel Eletricista",
       "Description": "Apresentação inicial dinâmica com uma variedade de elementos interativos e design visualmente atraente para uma experiência agradável ao usuário final.",
       "Technologies": ["React", "Node.js", "Styled Components", "EmailJS"],

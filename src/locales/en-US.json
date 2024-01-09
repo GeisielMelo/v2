@@ -74,16 +74,16 @@
       "Description": "A more effective way to view user information through graphs and statistics. Here, you can access all relevant details about GitHub users with ease.",
       "Technologies": ["React", "TypeScript", "Node.js", "Styled Components"],
       "GitLink": "https://github.com/GeisielMelo/Profile-visualizer",
-      "ImageLink": "https://github.com/GeisielMelo/Profile-visualizer/blob/main/public/preview.png",
+      "ImageLink": "https://raw.githubusercontent.com/GeisielMelo/Profile-visualizer/main/public/preview.png",
       "LiveLink": "https://profile-visualizer.vercel.app",
-      "Featured": false
+      "Featured": true
     },
     {
       "Title": "IMDb",
       "Description": "An app created in my free time with the aim of being a front-end-only application powered by data from TheMovieDB. It was designed to be a user-friendly platform where you can effortlessly search for movie and series information.",
       "Technologies": ["React", "TypeScript", "Tailwind", "Firebase"],
       "GitLink": "https://github.com/GeisielMelo/IMDb",
-      "ImageLink": "https://github.com/GeisielMelo/IMDb/blob/main/public/preview.png",
+      "ImageLink": "https://raw.githubusercontent.com/GeisielMelo/IMDb/main/public/preview.png",
       "LiveLink": "https://imdb-geisielmelo.vercel.app",
       "Featured": true
     },

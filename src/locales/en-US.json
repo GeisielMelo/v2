@@ -70,6 +70,33 @@
 
   "Archive": [
     {
+      "Title": "Profile Visualizer",
+      "Description": "A more effective way to view user information through graphs and statistics. Here, you can access all relevant details about GitHub users with ease.",
+      "Technologies": ["React", "TypeScript", "Node.js", "Styled Components"],
+      "GitLink": "https://github.com/GeisielMelo/Profile-visualizer",
+      "ImageLink": "https://github.com/GeisielMelo/Profile-visualizer/blob/main/public/preview.png",
+      "LiveLink": "https://profile-visualizer.vercel.app",
+      "Featured": false
+    },
+    {
+      "Title": "IMDb",
+      "Description": "An app created in my free time with the aim of being a front-end-only application powered by data from TheMovieDB. It was designed to be a user-friendly platform where you can effortlessly search for movie and series information.",
+      "Technologies": ["React", "TypeScript", "Tailwind", "Firebase"],
+      "GitLink": "https://github.com/GeisielMelo/IMDb",
+      "ImageLink": "https://github.com/GeisielMelo/IMDb/blob/main/public/preview.png",
+      "LiveLink": "https://imdb-geisielmelo.vercel.app",
+      "Featured": true
+    },
+    {
+      "Title": "Accounting app",
+      "Description": "Frontend interface for an accounting app. The objective here was to create a responsive design that renders the content of each section on the same page.",
+      "Technologies": ["React", "Node.js", "Styled Components", "React Table"],
+      "GitLink": "https://github.com/GeisielMelo/Accounting-app",
+      "ImageLink": "https://github.com/GeisielMelo/Accounting-app/blob/main/public/preview.png",
+      "LiveLink": "https://accounting-app-geisielmelo.vercel.app/",
+      "Featured": false
+    },
+    {
       "Title": "Maciel Eletricista",
       "Description": "Dynamic landing page featuring a range of interactive elements and visually appealing design for an enjoyable end-user experience.",
       "Technologies": ["React", "Node.js", "Styled Components", "EmailJS"],

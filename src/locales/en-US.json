@@ -142,13 +142,13 @@
       "Featured": false
     },
     {
-      "Title": "Portfolio",
+      "Title": "Portfolio - v1",
       "Description": "My portfolio is a platform designed to facilitate communication and showcase my projects. Inspired by Brittany Chiang's design, it was completely written and developed by me. It aims to provide a clear and engaging overview of my work, skills, and experiences.",
       "Technologies": ["React", "Node.js", "CSS", "HTML"],
       "GitLink": "https://github.com/GeisielMelo/Portfolio",
       "ImageLink": "https://img001.prntscr.com/file/img001/Te2QHnGOQKqGJKhLkMgNfg.png",
       "LiveLink": "https://geisielmelo.netlify.app/",
-      "Featured": true
+      "Featured": false
     },
     {
       "Title": "LandingPage",

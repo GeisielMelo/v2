@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
   return (
     <section id='#' className='flex flex-col h-screen justify-center text-white max-w-5xl w-full p-12 border border-zinc-700 transition-all font-inter'>
       <UpMotion>
-        <p className='text-[rgb(2,190,199)] font-sans mb-2'>
+        <p className='text-cyan-400 font-sans mb-2'>
           Hi, my name is
         </p>
       </UpMotion>

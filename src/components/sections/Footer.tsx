@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const styledButtons = 'ease-in-out duration-300 p-2 border border-transparent hover:text-cyan-400 hover:border-cyan-400 hover:bg-zinc-700'
 
   return (
-    <footer className='text-white py-4'>
+    <footer className='text-white py-4 font-inter text-sm'>
       <div className='flex items-center justify-center p-4 gap-4'>
         <div className='flex gap-4 lg:fixed bottom-0 left-8 lg:flex-col lg:items-center'>
           <button className={styledButtons} onClick={() => openNewTab(config.url.github)}>
@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p className='py-4 px-2'>
+      <p className='py-4 px-2 text-zinc-700'>
         © Designed & Built by{' '}
         <span className='ease-in-out duration-300 hover:cursor-pointer hover:text-cyan-400' onClick={() => openNewTab(config.url.github)}>
-          Geisiel Melo
+          {config.contact.git}
         </span>
         .
       </p>

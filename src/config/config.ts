@@ -1,10 +1,13 @@
 export default {
   url: {
     github: 'https://github.com/GeisielMelo',
-    linkedIn: 'https://www.linkedin.com/in/geisiel/',
+    linkedIn: 'https://www.linkedin.com/in/geisiel',
+    whatsApp: 'https://api.whatsapp.com/send?phone=5571981608087&text="Hello, I would like to speak to Geisiel."',
   },
-  contact: { 
+  contact: {
+    name: 'Geisiel Melo',
     email: 'geisiel.nascimento@gmail.com',
-    cel: '71 98160-8087',
+    phone: '5571981608087',
+    git: '@GeisielMelo',
   },
 }

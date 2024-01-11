@@ -14,6 +14,9 @@ export default {
         xs: '320px',
         ...defaultTheme.screens,
       },
+      boxShadow: {
+        'custom': '0 1px 1px 2px rgba(2, 190, 199, 0.3)',
+      }
     },
   },
   plugins: [],

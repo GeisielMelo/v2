@@ -10,4 +10,10 @@ export default {
     phone: '5571981608087',
     git: '@GeisielMelo',
   },
+  tech: {
+    languages: ['JavaScript', 'TypeScript', 'Python', 'Node'],
+    framework: ['Styled Components', 'Tailwind', 'React'],
+    tools: ['Chrome DevTools', 'Git & Github', 'Postman', 'VS Code', 'Figma'],
+    others: ['Firebase', ' Express', 'SQLite', 'Mongo', 'MySQL'],
+  },
 }

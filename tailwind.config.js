@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        fira: ['"Fira Code"', ...defaultTheme.fontFamily.mono],
       },
       screens: {
         xs: '320px',

@@ -9,3 +9,7 @@ export const mailTo = (email: string) => {
 export const toggleDarkMode = () => {
   return document.documentElement.classList.toggle('dark')
 }
+
+export const internalLinkClick = (url: string) => {
+  return (window.location.href = url)
+}

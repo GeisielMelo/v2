@@ -1,7 +1,12 @@
 import AppRoutes from './AppRoutes'
+import { GithubDataProvider } from './context/GithubDataContext'
 
 const App: React.FC = () => {
-  return <AppRoutes />
+  return (
+    <GithubDataProvider>
+      <AppRoutes />
+    </GithubDataProvider>
+  )
 }
 
 export default App

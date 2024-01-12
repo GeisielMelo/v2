@@ -16,4 +16,10 @@ export default {
     tools: ['Chrome DevTools', 'Git & Github', 'Postman', 'VS Code', 'Figma'],
     others: ['Firebase', ' Express', 'SQLite', 'Mongo', 'MySQL'],
   },
+  navBar: [
+    { name: 'About', url: '/#about' },
+    // { name: 'Featured', url: '/#featured' },
+    { name: 'Projects', url: '/#projects' },
+    { name: 'Contact', url: '/#contact' },
+  ]
 }

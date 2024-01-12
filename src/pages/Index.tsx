@@ -3,19 +3,21 @@ import Footer from '../components/sections/Footer'
 import About from '../components/sections/About'
 import Contact from '../components/sections/Contact'
 import Projects from '../components/sections/Projects'
-import Featured from '../components/sections/Featured'
+import Showcase from '../components/sections/Showcase'
 import { useGithubData } from '../context/GithubDataContext'
+import Nav from '../components/sections/Nav'
 
 const Index: React.FC = () => {
   const { data } = useGithubData()
 
   return (
     <>
-      <main className='flex flex-col items-center px-4 sm:px-8 lg:px-24'>
+      <Nav />
+      <main className='flex flex-col items-center px-4 sm:px-8 lg:px-24 dark:bg-black'>
         <Hero />
         <About />
-        <Featured />
-        <Projects data={data}/>
+        <Showcase />
+        <Projects data={data} />
         <Contact />
       </main>
       <Footer />

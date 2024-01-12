@@ -7,6 +7,9 @@ export type RepoProps = {
   topics: string[]
   homepage?: string
   html_url?: string
+  language?: string
+  created_at: string
+  id: number
 }
 
 type FetchDataError = {
@@ -35,7 +38,9 @@ export const useGithubData = () => {
   return context
 }
 
-export const GithubDataProvider: React.FC<DataProviderProps> = ({ children }) => {
+export const GithubDataProvider: React.FC<DataProviderProps> = ({
+  children,
+}) => {
   const [data, setData] = useState<RepoProps[] | null>(null)
   const [error, setError] = useState<FetchDataError | null>(null)
   const [loading, setLoading] = useState<boolean>(true)
@@ -50,7 +55,7 @@ export const GithubDataProvider: React.FC<DataProviderProps> = ({ children }) =>
 
         setData(fetchedData)
       } catch (error) {
-        setData(redundancy)
+        setData(redundancy as RepoProps[])
         setError(error as FetchDataError)
       } finally {
         setLoading(false)

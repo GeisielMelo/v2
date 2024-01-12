@@ -43,7 +43,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav
-      className='fixed flex justify-between w-full h-16 items-center px-8 border-b z-50 bg-white font-inter dark:border-b-zinc-700 dark:text-white dark:bg-black shadow-lg'
+      className='fixed flex justify-between w-full h-16 items-center px-8  z-50 shadow-lg font-inter backdrop-blur-md bg-white/80  dark:text-white dark:bg-black/80 dark:shadow-md dark:shadow-cyan-400/40 '
       style={{ top: activeClass, transition: 'top 0.2s ease' }}
     >
       <div

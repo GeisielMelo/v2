@@ -1,29 +1,20 @@
-import React, { useState } from "react";
-import enUS from "../locales/en-US.json";
-import ptBR from "../locales/pt-BR.json";
-import Wrapper from "../components/Wrapper";
-import Nav from "../components/Nav";
-import Table from "../components/Table";
-import VerticalBox from "../components/VerticalBox";
-import Footer from "../components/Footer";
-import { useScreenWidth } from "../hooks/useScreenWidth";
+import { useGithubData } from '../context/GithubDataContext'
+import Nav from '../components/sections/Nav'
+import ArchiveData from '../components/sections/ArchiveData'
+import Footer from '../components/sections/Footer'
 
-const Archive = () => {
-  const ScreenWidth = useScreenWidth();
-  const [locale, setLocale] = useState(enUS);
-
-  const handleLanguage = () => {
-    locale === enUS ? setLocale(ptBR) : setLocale(enUS);
-  };
+const Archive: React.FC = () => {
+  const { data, loading } = useGithubData()
 
   return (
-    <Wrapper>
-      <Nav isMobile={ScreenWidth < 1150} locale={locale.sections.Nav.buttons} />
-      <Table />
-      <VerticalBox translate={handleLanguage} isMobile={ScreenWidth < 1150} />
-      <Footer locale={locale.sections.Footer} />
-    </Wrapper>
-  );
-};
+    <>
+      <Nav />
+      <main className='flex flex-col items-center px-4 sm:px-8 lg:px-24 dark:bg-black'>
+        <ArchiveData data={data} loading={loading} />
+      </main>
+      <Footer />
+    </>
+  )
+}
 
-export default Archive;
+export default Archive

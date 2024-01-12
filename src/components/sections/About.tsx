@@ -4,7 +4,7 @@ const About: React.FC = () => {
   const { languages, framework, tools, others } = config.tech
 
   return (
-    <section className='flex flex-col max-w-5xl w-full px-12 py-28 gap-16 border border-t-0 border-zinc-700 text-white font-inter'>
+    <section id='about' className='flex flex-col max-w-5xl w-full px-4 md:px-12 py-28 gap-16 border border-t-0 border-zinc-700 text-white font-inter'>
       <div className='flex gap-8 md:gap-16 flex-col md:flex-row'>
         <div className='max-w-36 w-full'>
           <h1 className='text-cyan-400 font-inter font-semibold'>BACKGROUND</h1>

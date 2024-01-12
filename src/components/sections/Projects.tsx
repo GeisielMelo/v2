@@ -21,8 +21,12 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
       id='projects'
       className='flex flex-col items-center text-center max-w-5xl w-full px-4 md:px-12 py-28  font-inter dark:text-white'
     >
-      <h1 className='text-xl font-semibold dark:font-normal'>Other Noteworthy Projects</h1>
-      <p className='text-cyan-400 font-inter mt-2 font-semibold dark:font-normal'>Take a look!</p>
+      <h1 className='text-xl font-semibold dark:font-normal'>
+        Other Noteworthy Projects
+      </h1>
+      <p className='text-cyan-400 font-inter mt-2 font-semibold dark:font-normal'>
+        Take a look!
+      </p>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-12'>
         {data.slice(0, maxCards).map((element, key) => (

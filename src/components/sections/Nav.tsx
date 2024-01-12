@@ -9,7 +9,6 @@ const Nav: React.FC = () => {
     { name: 'About', url: '/#about' },
     { name: 'Featured', url: '/#featured' },
     { name: 'Projects', url: '/#projects' },
-    { name: 'Archive', url: '/#archive' },
   ]
 
   const handleInternalLinkClick = (url: string) => {
@@ -18,28 +17,30 @@ const Nav: React.FC = () => {
   }
 
   return (
-    <nav className='fixed top-0 flex w-full h-16 justify-between items-center px-8 text-white bg-black'>
-      <div className='flex items-center w-8 h-8' onClick={() => handleInternalLinkClick('/#')}>
+    <nav className='flex justify-between top-0 w-full h-16 items-center px-8 text-white bg-black'>
+      <div
+        className='flex items-center w-8 h-8'
+        onClick={() => handleInternalLinkClick('/#')}
+      >
         <img src={logo} alt='Logo image' />
       </div>
 
-      <div className='w-full'>
-        <ul className='items-center gap-4 px-4 lg:flex'>
-          {menu.map((element, key) => (
-            <li key={key} onClick={() => handleInternalLinkClick(element.url)}>
-              {element.name}
-            </li>
-          ))}
-        </ul>
+      <ul className='hidden lg:flex gap-4'>
+        {menu.map((element, key) => (
+          <li
+            className='py-1 px-2'
+            key={key}
+            onClick={() => handleInternalLinkClick(element.url)}
+          >
+            {element.name}
+          </li>
+        ))}
+      </ul>
 
-        <ul className='items-center gap-4 px-4 lg:flex'>
-          <li>Contact</li>
-          <li>Resume</li>
-          <li>LinkedIn</li>
-        </ul>
-      </div>
-
-      <button onClick={() => setOpenMenu(!openMenu)} className='block lg:hidden'>
+      <button
+        onClick={() => setOpenMenu(!openMenu)}
+        className='block lg:hidden'
+      >
         {openMenu ? <CloseRounded /> : <MenuRounded />}
       </button>
     </nav>

@@ -4,25 +4,31 @@ const About: React.FC = () => {
   const { languages, framework, tools, others } = config.tech
 
   return (
-    <section id='about' className='flex flex-col max-w-5xl w-full px-4 md:px-12 py-28 gap-16 border border-t-0 border-zinc-700 text-white font-inter'>
+    <section
+      id='about'
+      className='flex flex-col max-w-5xl w-full px-4 md:px-12 py-28 gap-16 border border-t-0 border-zinc-700 text-white font-inter'
+    >
       <div className='flex gap-8 md:gap-16 flex-col md:flex-row'>
         <div className='max-w-36 w-full'>
           <h1 className='text-cyan-400 font-inter font-semibold'>BACKGROUND</h1>
         </div>
         <div className='flex flex-col gap-4'>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore perspiciatis incidunt illum placeat possimus veniam vitae omnis aliquid molestiae distinctio voluptas
-            fugiat non temporibus ullam iusto, eligendi saepe et ab.
+            Currently, I am <span className='text-cyan-400'>seeking opportunities</span> to develop my <span className='text-cyan-400'>as a
+            software engineer</span> and work in the market building and maintaining <span className='text-cyan-400'>web applications of all kinds</span>.
           </p>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore perspiciatis incidunt illum placeat possimus veniam vitae omnis aliquid molestiae distinctio voluptas
-            fugiat non temporibus ullam iusto, eligendi saepe et ab.
+            As a software engineer, I enjoy <span className='text-cyan-400'>turning ideas into reality</span>.
+            Throughout my journey in the digital market, I have developed a deep
+            understanding of customer needs, and it is this experience that I
+            leverage when working on a project.
           </p>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore perspiciatis incidunt illum placeat possimus veniam vitae omnis aliquid molestiae distinctio voluptas
-            fugiat non temporibus ullam iusto, eligendi saepe et ab.
+          <span className='text-cyan-400'>When I'm not in front of the computer writing code</span>, I enjoy watching
+            movies at the cinema and hanging out with friends for extended
+            tabletop RPG sessions.
           </p>
         </div>
       </div>

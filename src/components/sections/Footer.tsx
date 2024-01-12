@@ -1,5 +1,5 @@
-import { GitHub, LinkedIn, Email, WhatsApp, Translate, LightMode } from '@mui/icons-material'
-import { openNewTab, mailTo } from '../../utils/handleFunctions'
+import { GitHub, LinkedIn, WhatsApp, LightMode } from '@mui/icons-material'
+import { openNewTab } from '../../utils/handleFunctions'
 import config from '../../config/config'
 
 const Footer: React.FC = () => {
@@ -15,15 +15,9 @@ const Footer: React.FC = () => {
           <button className={styledButtons} onClick={() => openNewTab(config.url.linkedIn)}>
             <LinkedIn />
           </button>
-          <button className={styledButtons} onClick={() => mailTo(config.contact.email)}>
-            <Email />
-          </button>
           <div className='hidden h-36 w-[0.125rem] bg-white lg:block' />
         </div>
         <div className='flex gap-4 lg:fixed bottom-0 right-8 lg:flex-col lg:items-center'>
-          <button className={styledButtons}>
-            <Translate />
-          </button>
           <button className={styledButtons}>
             <LightMode />
           </button>
@@ -34,12 +28,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p
-        className='w-full flex justify-center py-4 px-2 text-zinc-700 ease-in-out duration-300 hover:cursor-pointer hover:text-cyan-400'
-        onClick={() => openNewTab(config.url.github)}
-      >
-        © Designed & Built by {config.contact.git}.
-      </p>
+      <div className='w-full flex justify-center py-4'>
+        <p className='max-w-max px-2 text-zinc-700 ease-in-out duration-300 hover:cursor-pointer hover:text-cyan-400' onClick={() => openNewTab(config.url.github)}>
+          © Designed & Built by {config.contact.git}.
+        </p>
+      </div>
     </footer>
   )
 }

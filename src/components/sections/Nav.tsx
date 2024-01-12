@@ -43,20 +43,20 @@ const Nav: React.FC = () => {
 
   return (
     <nav
-      className='fixed flex justify-between w-full h-16 items-center px-8 border-b z-50 border-b-zinc-700 text-white bg-black'
+      className='fixed flex justify-between w-full h-16 items-center px-8 border-b z-50 bg-white font-inter dark:border-b-zinc-700 dark:text-white dark:bg-black shadow-lg'
       style={{ top: activeClass, transition: 'top 0.2s ease' }}
     >
       <div
-        className='flex items-center w-8 h-8'
+        className='flex items-center w-8 h-8 bg-cyan-400 rounded-full dark:bg-transparent'
         onClick={() => handleInternalLinkClick('/#')}
       >
-        <img src={logo} alt='Logo image' />
+        <img className='hover:cursor-pointer' src={logo} alt='Logo image' />
       </div>
 
       <ul className='hidden lg:flex gap-4'>
         {menu.map((element, key) => (
           <li
-            className='py-1 px-2'
+            className='py-1 px-2 hover:cursor-pointer hover:underline decoration-cyan-400'
             key={key}
             onClick={() => handleInternalLinkClick(element.url)}
           >

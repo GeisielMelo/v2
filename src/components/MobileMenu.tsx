@@ -14,10 +14,10 @@ export const MobileMenu: React.FC<Menu> = ({ handleInternalLinkClick, setOpenMen
   return (
     <ul className='fixed top-0 left-0 h-[100dvh] w-full z-40 flex flex-col items-center justify-center lg:hidden gap-4 backdrop-blur-md bg-white/80  dark:text-white dark:bg-black/80 '>
       <div
-        className='flex items-center w-8 h-8 bg-cyan-400 rounded-full dark:bg-transparent'
+        className='flex items-center w-8 h-8 mb-8 bg-cyan-400 rounded-full dark:bg-transparent'
         onClick={() => handleInternalLinkClick('/#')}
       >
-        <img className='hover:cursor-pointer mb-8' src={logo} alt='Logo image' />
+        <img className='hover:cursor-pointer' src={logo} alt='Logo image' />
       </div>
       <button
         onClick={() => setOpenMenu(!openMenu)}

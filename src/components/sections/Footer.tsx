@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     'ease-in-out duration-300 p-2 border border-transparent hover:text-cyan-400 hover:border-cyan-400 hover:bg-zinc-700'
 
   return (
-    <footer className='text-white py-4 font-inter text-sm'>
+    <footer className='text-white py-4 font-inter text-sm dark:bg-black'>
       <div className='flex items-center justify-center p-4 gap-4'>
         <div className='flex gap-4 lg:fixed bottom-0 left-8 lg:flex-col lg:items-center'>
           <button

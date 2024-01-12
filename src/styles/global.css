@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: rgb(0, 0, 0);
-}
-
 html {
   scroll-behavior: smooth;
   /* Custom scrollbar for Firefox */

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Profile Visualizer",
+    "description": "A more effective way to view user information through graphs and statistics. Here, you can access all relevant details about GitHub users with ease.",
+    "topics": ["React", "TypeScript", "Node.js", "Styled Components"],
+    "homepage": "https://profile-visualizer.vercel.app",
+    "html_url": "https://github.com/GeisielMelo/Profile-visualizer",
+    "image_preview": "https://raw.githubusercontent.com/GeisielMelo/Profile-visualizer/main/public/preview.png"
+  },
+  {
+    "name": "IMDb",
+    "description": "An app created in my free time with the aim of being a front-end-only application powered by data from TheMovieDB. It was designed to be a user-friendly platform where you can effortlessly search for movie and series information.",
+    "topics": ["React", "TypeScript", "Tailwind", "Firebase"],
+    "homepage": "https://imdb-geisielmelo.vercel.app",
+    "html_url": "https://github.com/GeisielMelo/IMDb",
+    "image_preview": "https://raw.githubusercontent.com/GeisielMelo/IMDb/main/public/preview.png"
+  },
+  {
+    "name": "LoL Auth",
+    "description": "Frontend and Backend login system based on the League of Legends client login theme, created during my free time to enhance my skills with React.",
+    "topics": ["React", "Node.js", "MongoDB", "Express"],
+    "homepage": "",
+    "html_url": "https://github.com/GeisielMelo/Medium-level-login-system",
+    "image_preview": "https://raw.githubusercontent.com/GeisielMelo/Medium-level-login-system/master/frontend/src/images/preview.png"
+  }
+]

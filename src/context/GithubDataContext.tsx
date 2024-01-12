@@ -8,8 +8,8 @@ export type RepoProps = {
   homepage?: string
   html_url?: string
   language?: string
-  created_at: string
-  id: number
+  created_at?: string
+  id?: number
 }
 
 type FetchDataError = {

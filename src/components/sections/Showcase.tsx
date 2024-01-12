@@ -7,12 +7,12 @@ const Showcase: React.FC = () => {
   return (
     <section
       id='featured'
-      className='flex flex-col justify-center items-center max-w-5xl w-full px-4 md:px-12 py-28 border border-t-0 border-zinc-700 text-white font-inter'
+      className='flex flex-col justify-center items-center max-w-5xl w-full px-4 md:px-12 py-28 font-inter dark:text-white'
     >
-      <h1 className='text-xl'>Some Things I’ve Built</h1>
-      <p className='text-cyan-400 font-inter mt-2 text-center'>
+      <h1 className='text-xl font-semibold dark:font-normal'>Some Things I’ve Built</h1>
+      <p className='text-cyan-400 font-inter mt-2 text-center font-semibold dark:font-normal'>
         A catalog of significant personal projects I've undertaken in my spare
-        time.
+        time. 
       </p>
 
       {featured.map((element, key) => (

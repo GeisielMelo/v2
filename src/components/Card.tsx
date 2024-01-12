@@ -10,7 +10,7 @@ export const Card: React.FC<RepoProps> = ({
   html_url,
 }) => {
   return (
-    <div className='flex flex-col p-4 text-left rounded-md shadow-custom-black dark:bg-cyan-600'>
+    <div className='flex flex-col p-4 text-left rounded-md shadow-custom-black dark:bg-cyan-600 dark:shadow-md dark:shadow-cyan-300/40'>
       <div className='flex justify-between gap-2'>
         {html_url && (
           <button

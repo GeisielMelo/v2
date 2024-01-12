@@ -1,15 +1,40 @@
 import { MenuRounded, CloseRounded } from '@mui/icons-material'
 import logo from '../../assets/logo.png'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { internalLinkClick } from '../../utils/handleFunctions'
 
 const Nav: React.FC = () => {
   const [openMenu, setOpenMenu] = useState(false)
+  const [activeClass, setActiveClass] = useState('0px')
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+
   const menu = [
     { name: 'About', url: '/#about' },
     { name: 'Featured', url: '/#featured' },
     { name: 'Projects', url: '/#projects' },
+    { name: 'Contact', url: '/#contact' },
   ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos =
+        window.scrollY || document.documentElement.scrollTop
+
+      if (currentScrollPos > prevScrollPos) {
+        setActiveClass('-100px')
+      } else if (currentScrollPos < prevScrollPos) {
+        setActiveClass('0px')
+      }
+
+      setPrevScrollPos(currentScrollPos)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [prevScrollPos])
 
   const handleInternalLinkClick = (url: string) => {
     if (openMenu) setOpenMenu(false)
@@ -17,7 +42,10 @@ const Nav: React.FC = () => {
   }
 
   return (
-    <nav className='flex justify-between top-0 w-full h-16 items-center px-8 text-white bg-black'>
+    <nav
+      className='fixed flex justify-between w-full h-16 items-center px-8 border-b z-50 border-b-zinc-700 text-white bg-black'
+      style={{ top: activeClass, transition: 'top 0.2s ease' }}
+    >
       <div
         className='flex items-center w-8 h-8'
         onClick={() => handleInternalLinkClick('/#')}

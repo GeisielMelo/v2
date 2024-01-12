@@ -15,7 +15,7 @@ export default {
         ...defaultTheme.screens,
       },
       boxShadow: {
-        'custom': '0 1px 1px 2px rgba(2, 190, 199, 0.3)',
+        'custom-black': 'rgba(2, 12, 27, 0.7) 1px 2px 10px',
       }
     },
   },

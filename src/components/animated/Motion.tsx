@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 type Motion = {
   children: React.ReactNode
   visible?: boolean
-  delay: number
+  delay?: number
 }
 
 export const HideMotion: React.FC<Motion> = ({ children, visible, delay = 0.2 }) => {

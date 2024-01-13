@@ -3,6 +3,7 @@ export default {
     github: 'https://github.com/GeisielMelo',
     linkedIn: 'https://www.linkedin.com/in/geisiel',
     whatsApp: 'https://api.whatsapp.com/send?phone=5571981608087&text="Hello, I would like to speak to Geisiel."',
+    githubRepos: "https://api.github.com/users/geisielmelo/repos"
   },
   contact: {
     name: 'Geisiel Melo',

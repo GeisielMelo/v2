@@ -19,7 +19,7 @@ export default {
   },
   navBar: [
     { name: 'About', url: '/#about' },
-    // { name: 'Featured', url: '/#featured' },
+    { name: 'Featured', url: '/#featured' },
     { name: 'Projects', url: '/#projects' },
     { name: 'Contact', url: '/#contact' },
   ]

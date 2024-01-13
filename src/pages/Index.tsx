@@ -4,12 +4,9 @@ import About from '../components/sections/About'
 import Contact from '../components/sections/Contact'
 import Projects from '../components/sections/Projects'
 // import Showcase from '../components/sections/Showcase'
-import { useGithubData } from '../context/GithubDataContext'
 import Nav from '../components/sections/Nav'
 
 const Index: React.FC = () => {
-  const { data } = useGithubData()
-
   return (
     <>
       <Nav />
@@ -17,7 +14,7 @@ const Index: React.FC = () => {
         <Hero />
         <About />
         {/* <Showcase /> */}
-        <Projects data={data} />
+        <Projects />
         <Contact />
       </main>
       <Footer />

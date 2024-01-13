@@ -1,32 +1,20 @@
 import { GitHub, OpenInNew } from '@mui/icons-material'
 import { openNewTab } from '../utils/handleFunctions'
-import { RepoProps } from '../context/GithubDataContext'
+import { RepoProps } from './sections/Projects'
 import { UpMotion } from './animated/Motion'
 
-export const Card: React.FC<RepoProps> = ({
-  name,
-  description,
-  topics,
-  homepage,
-  html_url,
-}) => {
+export const Card: React.FC<RepoProps> = ({ name, description, topics, homepage, html_url }) => {
   return (
     <UpMotion>
       <div className='flex flex-col p-4 text-left h-full rounded-md shadow-custom-black dark:bg-cyan-600 dark:shadow-md dark:shadow-cyan-300/40'>
         <div className='flex justify-between gap-2'>
           {html_url && (
-            <button
-              className='hover:text-cyan-400'
-              onClick={() => openNewTab(html_url)}
-            >
+            <button className='hover:text-cyan-400' onClick={() => openNewTab(html_url)}>
               <GitHub />
             </button>
           )}
           {homepage && (
-            <button
-              className='hover:text-cyan-400'
-              onClick={() => openNewTab(homepage)}
-            >
+            <button className='hover:text-cyan-400' onClick={() => openNewTab(homepage)}>
               <OpenInNew />
             </button>
           )}

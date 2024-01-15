@@ -1,6 +1,3 @@
-> **Note**: Under Construction JAN-12-2024.
-
-
 # Portfolio
 
 Version 2.0 of my portfolio, built with Vite for better performance and featuring new additions such as an archive page and direct contact functionality.
@@ -16,8 +13,9 @@ Version 2.0 of my portfolio, built with Vite for better performance and featurin
 
 - Node
 - React
-- Styled Components
-- HTML, CSS, JS.
+- Tailwind
+- Framer Motion
+- Github API
 
 ## Author
 

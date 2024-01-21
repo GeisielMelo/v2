@@ -18,6 +18,7 @@ export default {
     others: ['Firebase', ' Express', 'SQLite', 'Mongo', 'MySQL'],
   },
   navBar: [
+    { name: 'Home', url: '/#' },
     { name: 'About', url: '/#about' },
     { name: 'Featured', url: '/#featured' },
     { name: 'Projects', url: '/#projects' },
